@@ -1,0 +1,95 @@
+/*栏目*/
+.column{
+  width:100%;
+  display:flex;
+  justify-content:space-around;
+  text-align:center;
+  font-size:10px;
+}
+.column navigator{
+  width:80rpx;
+  height:80rpx;
+  line-height:115rpx;
+  border-radius:50%;
+  background-color:#fff;
+  margin:30rpx 0 10rpx;
+}
+.column navigator image{
+  width:60%;
+  border:1px solid #fff;
+}
+/*栏目预览*/
+.preview{
+  width:100%;
+  margin-top:30rpx;
+}
+.preview>text{
+  margin:35rpx 15rpx;
+  font-weight:bold;
+}
+/*歌曲组件*/
+.song{
+  width:100%;
+  height:100rpx;
+  padding:0 15rpx;
+  display:flex;
+  border-bottom:1px solid rgba(204,204,204,.4);
+  margin-top:20rpx;
+}
+.song>image{
+  width:90rpx; 
+  border-radius:7rpx;
+  margin-top:10rpx;
+}
+.songInfo{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:7rpx 20rpx;
+}
+.songInfo .singer{
+  font-size:10px;
+  color:#eee;
+  margin-top:10rpx;
+}
+.songLeft{
+  display: flex;
+  flex-direction: column;
+}
+.songRight>image{
+  width:60rpx;
+  margin-top:15rpx;
+}
+/*歌单组件*/
+.sheets{
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:20rpx;
+}
+.songSheets{
+  width:32%;
+  height:320rpx;
+  font-size:11px;
+  font-weight:normal;
+  display:flex;
+  flex-direction:column;
+  margin-left:1%;
+}
+.songSheets image{
+  width:100%;
+  height:80%;
+  border-radius:5rpx;
+}
+.songSheets text{
+  padding-bottom:20rpx;
+}
+.load{
+  border:1px solid #fff;
+  width:200rpx;
+  margin:0 auto;
+  padding:5rpx;
+  border-radius:5rpx;
+  text-align:center;
+  margin:20rpx auto;
+}

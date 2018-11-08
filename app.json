@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/everyday/everyday"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#45ADC6",
+    "navigationBarTitleText": "音乐瓶",
+    "navigationBarTextStyle": "white"
+  }
+}

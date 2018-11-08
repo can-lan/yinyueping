@@ -1,0 +1,186 @@
+<!--导航栏-->
+<view class='nav'>
+  <navigator class="info">
+    <image src='/pages/image/admin.png'></image>
+  </navigator>
+  <navigator class="list">
+    <image src='/pages/image/list.png'></image>
+  </navigator>
+  <navigator class='bottle'>
+    <image src='/pages/image/music.png'></image>
+  </navigator>
+  <navigator class='news'>
+    <image src='/pages/image/news.png'></image>
+  </navigator>
+  <navigator class='search'>
+    <image src='/pages/image/search.png'></image>
+  </navigator>
+</view>
+<!--轮播图-->
+<swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+  <block wx:for="{{banner}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" mode='widthFix' lazy-load='true'/>
+    </swiper-item>
+  </block>
+</swiper>
+<!--栏目-->
+<view class="column">
+  <view>
+    <navigator url='/pages/everyday/everyday' class='everyday'>
+      <image src='/pages/image/everyday.png'  mode='widthFix'></image>
+    </navigator>
+    <text>每日推荐</text>
+  </view>
+  <view>
+    <navigator class='ranking'>
+      <image src='/pages/image/ranking.png'  mode='widthFix'></image>
+    </navigator>
+    <text>排行榜</text>
+  </view>
+  <view>
+    <navigator class='songSheet'>
+      <image src='/pages/image/songSheet.png'  mode='widthFix'></image>
+    </navigator>
+    <text>歌单</text>
+  </view>
+  <view>
+    <navigator class='singer'>
+      <image src='/pages/image/singer.png'  mode='widthFix'></image>
+    </navigator>
+    <text>歌手</text>
+  </view>
+</view>
+<!--栏目预览-->
+<view class='preview'>
+  <!--标题组件-->
+  <text>推荐歌单 ></text>
+  <!--歌单组件-->
+  <view class="sheets">
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet1.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet2.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet3.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet4.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet5.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet6.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet7.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet8.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet9.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+  </view>
+</view>
+<!--栏目预览-->
+<view class='preview'>
+  <!--标题组件-->
+  <text>每日推荐 ></text>
+  <!--歌曲组件-->
+  <view class='song'>
+    <image src="/pages/image/songImg.png" mode="widthFix"></image>
+    <view class='songInfo'>
+      <view class='songLeft'>
+        <text class='title'>年少有为</text>
+        <text class='singer'>李荣浩-耳朵</text>
+      </view>
+      <view class='songRight'>
+      <image src="/pages/image/news.png" mode="widthFix"></image>
+      <image src="/pages/image/detail.png"  mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+  <!--歌曲组件-->
+  <view class='song'>
+    <image src="/pages/image/songImg.png" mode="widthFix"></image>
+    <view class='songInfo'>
+      <view class='songLeft'>
+        <text class='title'>年少有为</text>
+        <text class='singer'>李荣浩-耳朵</text>
+      </view>
+      <view class='songRight'>
+      <image src="/pages/image/news.png" mode="widthFix"></image>
+      <image src="/pages/image/detail.png"  mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+  <!--歌曲组件-->
+  <view class='song'>
+    <image src="/pages/image/songImg.png" mode="widthFix"></image>
+    <view class='songInfo'>
+      <view class='songLeft'>
+        <text class='title'>年少有为</text>
+        <text class='singer'>李荣浩-耳朵</text>
+      </view>
+      <view class='songRight'>
+      <image src="/pages/image/news.png" mode="widthFix"></image>
+      <image src="/pages/image/detail.png"  mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+  <!--歌曲组件-->
+  <view class='song'>
+    <image src="/pages/image/songImg.png" mode="widthFix"></image>
+    <view class='songInfo'>
+      <view class='songLeft'>
+        <text class='title'>年少有为</text>
+        <text class='singer'>李荣浩-耳朵</text>
+      </view>
+      <view class='songRight'>
+      <image src="/pages/image/news.png" mode="widthFix"></image>
+      <image src="/pages/image/detail.png"  mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+  <!--歌曲组件-->
+  <view class='song'>
+    <image src="/pages/image/songImg.png" mode="widthFix"></image>
+    <view class='songInfo'>
+      <view class='songLeft'>
+        <text class='title'>年少有为</text>
+        <text class='singer'>李荣浩-耳朵</text>
+      </view>
+      <view class='songRight'>
+      <image src="/pages/image/news.png" mode="widthFix"></image>
+      <image src="/pages/image/detail.png"  mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+  <!--加载更多-->
+  <view class='load'>
+    <text>加载更多</text>
+  </view>
+</view>
+
+
