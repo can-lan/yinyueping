@@ -1,7 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/everyday/everyday"
+    "pages/everyday/everyday",
+    "pages/ranking/ranking",
+    "pages/sheet/sheet",
+    "pages/singer/singer"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,26 +1,26 @@
 <!--导航栏-->
 <view class='nav'>
   <navigator class="info">
-    <image src='/pages/image/admin.png'></image>
+    <image src='/pages/image/admin.png' mode='aspectFit'></image>
   </navigator>
   <navigator class="list">
-    <image src='/pages/image/list.png'></image>
+    <image src='/pages/image/list.png' mode='aspectFit'></image>
   </navigator>
   <navigator class='bottle'>
-    <image src='/pages/image/music.png'></image>
+    <image src='/pages/image/music.png' mode='aspectFit'></image>
   </navigator>
   <navigator class='news'>
-    <image src='/pages/image/news.png'></image>
+    <image src='/pages/image/news.png' mode='aspectFit'></image>
   </navigator>
   <navigator class='search'>
-    <image src='/pages/image/search.png'></image>
+    <image src='/pages/image/search.png' mode='aspectFit'></image>
   </navigator>
 </view>
 <!--轮播图-->
 <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
   <block wx:for="{{banner}}" wx:key="index">
     <swiper-item>
-      <image src="{{item}}" mode='widthFix' lazy-load='true'/>
+      <image src="{{item}}" mode='aspectFit' lazy-load='true'/>
     </swiper-item>
   </block>
 </swiper>
@@ -33,19 +33,19 @@
     <text>每日推荐</text>
   </view>
   <view>
-    <navigator class='ranking'>
+    <navigator url='/pages/ranking/ranking' class='ranking'>
       <image src='/pages/image/ranking.png'  mode='widthFix'></image>
     </navigator>
     <text>排行榜</text>
   </view>
   <view>
-    <navigator class='songSheet'>
+    <navigator url='/pages/sheet/sheet' class='songSheet'>
       <image src='/pages/image/songSheet.png'  mode='widthFix'></image>
     </navigator>
     <text>歌单</text>
   </view>
   <view>
-    <navigator class='singer'>
+    <navigator url='/pages/singer/singer' class='singer'>
       <image src='/pages/image/singer.png'  mode='widthFix'></image>
     </navigator>
     <text>歌手</text>

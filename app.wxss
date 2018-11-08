@@ -1,4 +1,5 @@
 page{
+  width:100%;
   background:url('http://www.zhuimi.co/img/bg.jpg') no-repeat;
   background-size: 100% 100%;
   background-attachment:fixed;
@@ -25,7 +26,82 @@ page{
 .bottle{margin:0 -130rpx;}
 /*轮播图*/
 swiper,swiper-item,swiper-item image{
-  width:98%;
-  margin:0.6%;
-  border-radius:10rpx;
+  width:100%;
+  height:336rpx;
+  margin-top:4rpx;
+  border-radius:20rpx;
+}
+/*顶部标题栏*/
+page>.title{
+  background:#45ADC6;
+  padding-bottom:10rpx;
+}
+/*歌曲组件*/
+.song{
+  width:100%;
+  height:80rpx;
+  padding:10rpx;
+  display:flex;
+  border-bottom:1px solid rgba(204,204,204,.4);
+}
+.song>image{
+  width:90rpx; 
+  border-radius:7rpx;
+}
+.songInfo{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  margin-left:20rpx;
+}
+.songLeft{
+  display: flex;
+  flex-direction: column;
+}
+.songLeft .singer{
+  font-size:10px;
+  color:#eee;
+  margin-top:10rpx;
+}
+.songRight>image{
+  width:60rpx;
+  padding:10rpx 10rpx 0 0;
+}
+/*歌单组件*/
+.sheets{
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:20rpx;
+}
+.songSheets{
+  width:32%;
+  height:320rpx;
+  font-size:11px;
+  font-weight:normal;
+  display:flex;
+  flex-direction:column;
+  margin-left:1%;
+}
+.songSheets image{
+  width:100%;
+  height:80%;
+  border-radius:8rpx;
+}
+.songSheets text{
+  padding-bottom:20rpx;
+}
+/*加载更多*/
+.load{
+  border:1px solid #fff;
+  width:200rpx;
+  padding:5rpx;
+  border-radius:5rpx;
+  text-align:center;
+  margin:20rpx auto;
+}
+/*居中标题*/
+.ctitle{
+  text-align:center;
+  margin:30rpx 0;  
 }

@@ -1,0 +1,136 @@
+<!--歌单组件-->
+  <view class="sheets">
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet1.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet2.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet3.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet4.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet5.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet6.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet7.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet8.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet9.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+       <view class='songSheets'>
+      <image src="/pages/image/songSheet1.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet2.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet3.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet4.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet5.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet6.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet7.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet8.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet9.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+       <view class='songSheets'>
+      <image src="/pages/image/songSheet1.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet2.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet3.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet4.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet5.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet6.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet7.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet8.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/songSheet9.jpg" mode="aspectFit"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+  </view>
+  

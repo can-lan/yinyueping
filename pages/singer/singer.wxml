@@ -1,0 +1,82 @@
+<!--歌单组件-->
+  <view class="sheets">
+    <view class='songSheets'>
+      <image src="/pages/image/singer1.jpg" mode="widthFix"></image>
+      <text>Vicetone</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/singer2.jpg" mode="widthFix"></image>
+      <text>房东的猫</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/singer3.jpg" mode="widthFix"></image>
+      <text>陈粒</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/singer4.jpg" mode="widthFix"></image>
+      <text>陈绮贞</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/singer5.jpg" mode="widthFix"></image>
+      <text>陈雪凝</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/singer6.jpg" mode="widthFix"></image>
+      <text>花粥</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/singer7.jpg" mode="widthFix"></image>
+      <text>任然</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/singer8.jpg" mode="widthFix"></image>
+      <text>双笙</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/singer9.jpg" mode="widthFix"></image>
+      <text>蔡健雅</text>
+    </view>
+       <view class='songSheets'>
+      <image src="/pages/image/singer10.jpg" mode="widthFix"></image>
+      <text>洛天依</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/singer11.jpg" mode="widthFix"></image>
+      <text>谢春花</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/singer12.jpg" mode="widthFix"></image>
+      <text>周杰伦</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/singer13.jpg" mode="widthFix"></image>
+      <text>李荣浩</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/singer14.jpg" mode="widthFix"></image>
+      <text>毛不易</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/singer15.jpg" mode="widthFix"></image>
+      <text>薛之谦</text>
+    </view>
+    <!--歌单组件-->
+    <view class='songSheets'>
+      <image src="/pages/image/singer16.jpg" mode="widthFix"></image>
+      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    </view>
+  </view>
+  

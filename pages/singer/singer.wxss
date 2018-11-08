@@ -1,0 +1,10 @@
+.sheets image{
+  border-radius:50%;
+}
+.sheets{
+  text-align:center;
+}
+.songSheets{
+  width:23.7%;
+  height:260rpx;
+}
