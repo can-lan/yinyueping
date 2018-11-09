@@ -1,10 +1,16 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/everyday/everyday",
+    "pages/list/list",
+    "pages/index/index",
+    "pages/news/news",
+    "pages/comment/comment",
+    "pages/details/details",
     "pages/ranking/ranking",
     "pages/sheet/sheet",
-    "pages/singer/singer"
+    "pages/singer/singer",
+    "component/player/player",
+    "component/song/song"
   ],
   "window": {
     "backgroundTextStyle": "light",

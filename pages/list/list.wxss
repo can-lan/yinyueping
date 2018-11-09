@@ -1,0 +1,43 @@
+#list{
+  display:flex;
+  padding:15rpx;
+  background:rgba(100,100,100,.2)
+}
+.love{
+  width:100rpx;
+  height:100rpx;
+  position:relative;
+}
+.love image:first-child{
+  width:100rpx;
+  height:100rpx;
+  border-radius:7rpx;
+}
+.love image:last-child{
+  width:100rpx;
+  height:100rpx;
+  position:absolute;
+  left:0;
+  border-radius:7rpx;
+  background:rgba(100,100,100,.5);
+}
+.loveList{
+  position:relative;
+  width:100%;
+  height:90rpx;
+  margin-left:20rpx;
+  display:flex;
+  flex-direction:column;
+  margin-top:10rpx;
+}
+.loveList image{
+  width:40rpx;
+  height:40rpx;
+  position:absolute;
+  right:20rpx;
+  top:20rpx;
+}
+.count{
+  font-size:12px;
+  margin-top:10rpx;
+}

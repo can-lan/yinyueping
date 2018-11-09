@@ -1,0 +1,10 @@
+<!--播放器-->
+<view class='player'>
+  <image class='songPic' src='/pages/image/songSheet8.jpg'></image>
+  <view>
+    <text class='songName'>{{title}}</text>
+    <text class='songSinger'>{{singer}}</text>
+  </view>
+  <image class='songState' src='/pages/image/start.png' bindtap='play'></image>
+  <image class='songList' src='/pages/image/list0.png'></image>
+</view>

@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "song": "/component/song/song","player": "/component/player/player"
+  }  
+}

@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    title:'Fragments',
+    singer:'千坂'
   },
 
   /**
@@ -62,5 +63,15 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /*点击歌曲,将当前歌曲信息插入当前播放器列表,播放器显示列表数组第一条(已有就找到那条)*/
+  loadPlayer: function(event){
+    var e=event.currentTarget.dataset ;
+    console.log('触发');
+    console.log(e.title)
+    this.setData({
+      title:e.title,
+      singer:e.singer
+    })
   }
 })

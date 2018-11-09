@@ -1,0 +1,86 @@
+<!--导航栏-->
+<view class='nav'>
+  <navigator class="info">
+    <image src='/pages/image/admin.png' mode='aspectFit'></image>
+  </navigator>
+  <navigator class="list">
+    <image src='/pages/image/list.png' mode='aspectFit'></image>
+  </navigator>
+  <navigator class='bottle'>
+    <image src='/pages/image/music.png' mode='aspectFit'></image>
+  </navigator>
+  <navigator class='news'>
+    <image src='/pages/image/news.png' mode='aspectFit'></image>
+  </navigator>
+  <navigator class='search'>
+    <image src='/pages/image/search.png' mode='aspectFit'></image>
+  </navigator>
+</view>
+<!--视频组件-->
+<view class='news'>
+  <video src='/pages/image/video/banner.mp4'></video>
+  <text>视频名称</text>
+  <view class='videoInfo'>
+    <view class='user'>
+      <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
+      <text>用户名</text>
+    </view>
+    <view class='toolbar'>
+      <image src='/pages/image/up.png'></image>
+      <text>25</text>
+      <image src='/pages/image/comment.png'></image>
+      <text>7</text>
+    </view>
+  </view>
+</view>
+<!--视频组件-->
+<view class='news'>
+  <video src='/pages/image/video/banner.mp4' controls='false'></video>
+  <text>视频名称</text>
+  <view class='videoInfo'>
+    <view class='user'>
+      <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
+      <text>用户名</text>
+    </view>
+    <view class='toolbar'>
+      <image src='/pages/image/up.png'></image>
+      <text>25</text>
+      <image src='/pages/image/comment.png'></image>
+      <text>7</text>
+    </view>
+  </view>
+</view>
+<!--视频组件-->
+<view class='news'>
+  <video src='/pages/image/video/banner.mp4' ></video>
+  <text>视频名称</text>
+  <view class='videoInfo'>
+    <view class='user'>
+      <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
+      <text>用户名</text>
+    </view>
+    <view class='toolbar'>
+      <image src='/pages/image/up.png'></image>
+      <text>25</text>
+      <image src='/pages/image/comment.png'></image>
+      <text>7</text>
+    </view>
+  </view>
+</view>
+<!--视频组件-->
+<view class='news'>
+  <video src='/pages/image/video/banner.mp4' ></video>
+  <text>视频名称</text>
+  <view class='videoInfo'>
+    <view class='user'>
+      <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
+      <text>用户名</text>
+    </view>
+    <view class='toolbar'>
+      <image src='/pages/image/up.png' mode='aspectFit'></image>
+      <text>25</text>
+      <image src='/pages/image/comment.png' mode='aspectFit'></image>
+      <text>7</text>
+    </view>
+  </view>
+</view>

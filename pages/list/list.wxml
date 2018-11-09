@@ -1,0 +1,32 @@
+<!--导航栏-->
+<view class='nav'>
+  <navigator class="info" url='/pages/info/info'>
+    <image src='/pages/image/admin.png' mode='aspectFit'></image>
+  </navigator>
+  <navigator class="list" url='/pages/list/list'>
+    <image src='/pages/image/list.png' mode='aspectFit'></image>
+  </navigator>
+  <navigator class='bottle' url='/pages/index/index'>
+    <image src='/pages/image/music.png' mode='aspectFit'></image>
+  </navigator>
+  <navigator class='news' url='/pages/news/news'>
+    <image src='/pages/image/news.png' mode='aspectFit'></image>
+  </navigator>
+  <navigator class='search' url='/pages/search/search'>
+    <image src='/pages/image/search.png' mode='aspectFit'></image>
+  </navigator>
+</view>
+<!--我喜欢的音乐-->
+<view id="list">
+  <view class='love'>
+    <image src='/pages/image/singer2.jpg'></image>
+    <image src='/pages/image/love.png'></image>
+  </view>
+  <view class="loveList">
+    <text>我喜欢的音乐</text>
+    <text class='count'>269首</text>
+    <image src='/pages/image/vol.png'></image>
+  </view>
+</view>
+<!--引入播放器组件-->
+<player id="play" songName='歌曲名'></player>

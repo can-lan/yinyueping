@@ -1,0 +1,146 @@
+<!--评论歌曲信息-->
+<view class='commentSong arrow'>
+  <image src='/pages/image/songSheet1.jpg'></image>
+  <view>
+    <text class='title'>歌曲名称</text>
+    <text class='uname'>用户名字</text>
+  </view>
+</view>
+<!--精彩评论-->
+<view class='bg-title'>
+  <text>精彩评论</text>
+</view>
+<!--评论内容-->
+<!--评论组件-->
+<view class='comments'>
+  <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
+  <view>
+    <view class='commentInfo'>
+      <view class='userTime'>
+        <text>用户名字</text>
+        <text>评论时间</text>
+      </view>
+      <view class="up">
+        <text>25赞</text>
+        <image src='/pages/image/up.png'></image>
+      </view>
+    </view>
+    <view class='commentText'>
+      <text>你啊年少有为 而我年幼无知 可能因为这样 我们之间才不可能吧</text>
+    </view>
+  </view>
+</view>
+<!--评论组件-->
+<view class='comments'>
+  <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
+  <view>
+    <view class='commentInfo'>
+      <view class='userTime'>
+        <text>用户名字</text>
+        <text>评论时间</text>
+      </view>
+      <view class="up">
+        <text>25赞</text>
+        <image src='/pages/image/up.png'></image>
+      </view>
+    </view>
+    <view class='commentText'>
+      <text>你啊年少有为 而我年幼无知 可能因为这样 我们之间才不可能吧</text>
+    </view>
+  </view>
+</view>
+<!--评论组件-->
+<view class='comments'>
+  <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
+  <view>
+    <view class='commentInfo'>
+      <view class='userTime'>
+        <text>用户名字</text>
+        <text>评论时间</text>
+      </view>
+      <view class="up">
+        <text>25赞</text>
+        <image src='/pages/image/up.png'></image>
+      </view>
+    </view>
+    <view class='commentText'>
+      <text>你啊年少有为 而我年幼无知 可能因为这样 我们之间才不可能吧</text>
+    </view>
+  </view>
+</view>
+<!--评论组件-->
+<view class='comments'>
+  <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
+  <view>
+    <view class='commentInfo'>
+      <view class='userTime'>
+        <text>用户名字</text>
+        <text>评论时间</text>
+      </view>
+      <view class="up">
+        <text>25赞</text>
+        <image src='/pages/image/up.png'></image>
+      </view>
+    </view>
+    <view class='commentText'>
+      <text>你啊年少有为 而我年幼无知 可能因为这样 我们之间才不可能吧</text>
+    </view>
+  </view>
+</view>
+<!--评论组件-->
+<view class='comments'>
+  <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
+  <view>
+    <view class='commentInfo'>
+      <view class='userTime'>
+        <text>用户名字</text>
+        <text>评论时间</text>
+      </view>
+      <view class="up">
+        <text>25赞</text>
+        <image src='/pages/image/up.png'></image>
+      </view>
+    </view>
+    <view class='commentText'>
+      <text>你啊年少有为 而我年幼无知 可能因为这样 我们之间才不可能吧</text>
+    </view>
+  </view>
+</view>
+<!--评论组件-->
+<view class='comments'>
+  <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
+  <view>
+    <view class='commentInfo'>
+      <view class='userTime'>
+        <text>用户名字</text>
+        <text>评论时间</text>
+      </view>
+      <view class="up">
+        <text>25赞</text>
+        <image src='/pages/image/up.png'></image>
+      </view>
+    </view>
+    <view class='commentText'>
+      <text>你啊年少有为 而我年幼无知 可能因为这样 我们之间才不可能吧</text>
+    </view>
+  </view>
+</view>
+<!--评论组件-->
+<view class='comments'>
+  <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
+  <view>
+    <view class='commentInfo'>
+      <view class='userTime'>
+        <text>用户名字</text>
+        <text>评论时间</text>
+      </view>
+      <view class="up">
+        <text>25赞</text>
+        <image src='/pages/image/up.png'></image>
+      </view>
+    </view>
+    <view class='commentText'>
+      <text>你啊年少有为 而我年幼无知 可能因为这样 我们之间才不可能吧</text>
+    </view>
+  </view>
+</view>

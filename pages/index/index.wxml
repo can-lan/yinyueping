@@ -3,16 +3,16 @@
   <navigator class="info">
     <image src='/pages/image/admin.png' mode='aspectFit'></image>
   </navigator>
-  <navigator class="list">
+  <navigator class="list" url='/pages/list/list'>
     <image src='/pages/image/list.png' mode='aspectFit'></image>
   </navigator>
-  <navigator class='bottle'>
+  <navigator class='bottle' url='/pages/index/index'>
     <image src='/pages/image/music.png' mode='aspectFit'></image>
   </navigator>
-  <navigator class='news'>
+  <navigator class='news' url='/pages/news/news'>
     <image src='/pages/image/news.png' mode='aspectFit'></image>
   </navigator>
-  <navigator class='search'>
+  <navigator class='search' url='/pages/search/search'>
     <image src='/pages/image/search.png' mode='aspectFit'></image>
   </navigator>
 </view>
@@ -182,5 +182,4 @@
     <text>加载更多</text>
   </view>
 </view>
-
 

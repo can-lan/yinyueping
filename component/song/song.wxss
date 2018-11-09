@@ -1,0 +1,54 @@
+.song{
+  width:100%;
+  height:80rpx;
+  padding:10rpx;
+  display:flex;
+  border-bottom:1px solid rgba(204,204,204,.4);
+}
+.song>image{
+  width:90rpx; 
+  border-radius:7rpx;
+}
+.songInfo{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  margin-left:20rpx;
+}
+.songLeft{
+  display: flex;
+  flex-direction: column;
+}
+.songLeft .singer{
+  font-size:10px;
+  color:#eee;
+  margin-top:10rpx;
+}
+.songRight>image{
+  width:60rpx;
+  padding:10rpx 10rpx 0 0;
+}
+/*歌单组件*/
+.sheets{
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:20rpx;
+}
+.songSheets{
+  width:32%;
+  height:320rpx;
+  font-size:11px;
+  font-weight:normal;
+  display:flex;
+  flex-direction:column;
+  margin-left:1%;
+}
+.songSheets image{
+  width:100%;
+  height:80%;
+  border-radius:8rpx;
+}
+.songSheets text{
+  padding-bottom:20rpx;
+}
