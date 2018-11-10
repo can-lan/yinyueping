@@ -10,21 +10,32 @@ Page({
       "/pages/image/banner2.png",
       "/pages/image/banner3.png",
       "/pages/image/banner4.png"
-    ]
+    ],
+    song:[],
+    playing: {
+      id: 1, title: "Fragments", singer: "千坂", epname: "Fragments", coverImgUrl: "http://www.zhuimi.co/song/img/fragments.jpg", src:"http://www.zhuimi.co/song/fragments.mp3"}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url:'http://127.0.0.1:7001/song',
+      success:(res)=>{
+        this.setData({
+          song:res.data
+        })
+        console.log(this.data.song)
+      }
+    });
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+   
   },
 
   /**
@@ -67,5 +78,17 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /*点击song组件,利用index从当前data内的song[]数组,找到正在播放的对象,插入storage*/
+  local:function(event){
+    var e=event.currentTarget.dataset;
+    var playing=this.data.song[e.index];
+    this.setData({
+      playing:playing
+    });
+    wx.setStorage({
+      key:'playing',
+      data:playing
+    });
   }
 })

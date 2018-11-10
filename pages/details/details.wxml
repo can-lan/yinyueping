@@ -166,16 +166,4 @@
     </view>
   </view>
   <!--歌曲组件-->
-  <view class='song'>
-    <image src="/pages/image/songImg.png" mode="widthFix"></image>
-    <view class='songInfo'>
-      <view class='songLeft'>
-        <text class='title'>年少有为</text>
-        <text class='singer'>李荣浩-耳朵</text>
-      </view>
-      <view class='songRight'>
-      <image src="/pages/image/news.png" mode="widthFix"></image>
-      <image src="/pages/image/detail.png"  mode="widthFix"></image>
-      </view>
-    </view>
-  </view>
+ <song></song>

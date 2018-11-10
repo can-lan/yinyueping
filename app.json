@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/everyday/everyday",
     "pages/list/list",
-    "pages/index/index",
     "pages/news/news",
     "pages/comment/comment",
     "pages/details/details",

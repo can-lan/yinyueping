@@ -36,37 +36,6 @@ page>.title{
   background:#45ADC6;
   padding-bottom:10rpx;
 }
-/*歌曲组件--已加入自定义组件*/
-.song{
-  width:100%;
-  height:80rpx;
-  padding:10rpx;
-  display:flex;
-  border-bottom:1px solid rgba(204,204,204,.4);
-}
-.song>image{
-  width:90rpx; 
-  border-radius:7rpx;
-}
-.songInfo{
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  margin-left:20rpx;
-}
-.songLeft{
-  display: flex;
-  flex-direction: column;
-}
-.songLeft .singer{
-  font-size:10px;
-  color:#eee;
-  margin-top:10rpx;
-}
-.songRight>image{
-  width:60rpx;
-  padding:10rpx 10rpx 0 0;
-}
 /*歌单组件*/
 .sheets{
   width:100%;
@@ -149,36 +118,4 @@ page>.title{
   position:absolute;
   top:40%;
   left:90%;
-}
-/*播放器*/
-#player{
-  width:100%;
-  height:100rpx;
-  position:fixed;
-  bottom:0;
-  display:flex;
-  background:rgba(131,180,171,.7);
-}
-#player .songPic{
-  width:80rpx;
-  height:80rpx;
-  border-radius:6rpx;
-  margin:10rpx;
-}
-#player>view{
-  display:flex;
-  flex-direction:column;
-  height:80rpx;
-  width:60%;
-  margin:10rpx;
-}
-#player .songSinger{
-  font-size:12px;
-  color:#eee;
-  margin-top:10rpx;
-}
-#player .songState,.songList{
-  width:60rpx;
-  height:60rpx;
-  margin:20rpx;
 }
