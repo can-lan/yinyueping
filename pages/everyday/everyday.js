@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    song:[],
     playing:{}
   },
 
@@ -21,7 +22,17 @@ Page({
           playing:res.data
         })
       }
-    })
+    });
+
+    /*请求歌曲表*/
+    wx.request({
+      url:'http://wx.yinyueping.com:7002/song',
+      success:(res)=>{
+        this.setData({
+          song:res.data
+        });
+      }
+    });
   },
 
   /**

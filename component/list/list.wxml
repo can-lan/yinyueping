@@ -1,0 +1,4 @@
+<view class='songSheets'>
+  <image src="/pages/image/songSheet2.jpg" mode="aspectFit"></image>
+  <text>我最大的遗憾,是你的遗憾与我有关</text>
+</view>

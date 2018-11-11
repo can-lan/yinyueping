@@ -10,7 +10,8 @@
     "pages/sheet/sheet",
     "pages/singer/singer",
     "component/player/player",
-    "component/song/song"
+    "component/song/song",
+    "component/list/list"
   ],
   "window": {
     "backgroundTextStyle": "light",

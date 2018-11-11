@@ -1,22 +1,16 @@
+<!--顶部图片-->
 <view class='banner'>
   <image src='/pages/image/banner0.png'  mode='aspectFit'></image>
 </view>
+<!--播放全部标题-->
 <view class='play'>
   <view>
     <image src='/pages/image/play.png' mode='aspectFit'></image>
     <text>播放全部</text>
   </view>
-  <view>
-    <image src='/pages/image/list.png' mode='aspectFit'></image>
-    <text>多选</text>
-  </view>
 </view>
 <!--歌曲组件-->
-  <song bindtap='loadPlayer' data-title='{{}}' data-singer='{{}}'></song>
-  <song></song>
-  <song></song>
-  <song></song>
-  <song></song>
+  <song wx:for='{{song}}' wx:key='{{id}}' title='{{item.title}}' singer='{{item.singer}}' epname='{{item.epname}}' coverImgUrl='{{item.coverImgUrl}}' bindtap='loadPlayer' data-title='{{}}' data-singer='{{}}'></song>
   <!--加载更多
   <view class='load'>
     <text>加载更多</text>

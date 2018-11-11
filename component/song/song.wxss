@@ -6,7 +6,8 @@
   border-bottom:1px solid rgba(204,204,204,.4);
 }
 .song>image{
-  width:90rpx; 
+  width:90rpx;
+  height:90rpx; 
   border-radius:7rpx;
 }
 .songInfo{

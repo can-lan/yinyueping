@@ -1,5 +1,5 @@
-  <view class='song' bindtap='play' data-title='{{title}}' data-singer='{{singer}}' data-epname='{{epname}}' data-coverImgUrl='{{coverImgUrl}}' data-src='{{src}}' >
-    <image src="/pages/image/songImg.png" mode="widthFix"></image>
+  <view class='song'>
+    <image src="{{coverImgUrl}}" mode="widthFix"></image>
     <view class='songInfo'>
       <view class='songLeft'>
         <text class='title'>{{title}}</text>

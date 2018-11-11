@@ -5,14 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    list:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: 'http://wx.yinyueping.com:7002/list', //请求歌单表
+      success: (res) => {
+        this.setData({
+          list: res.data
+        });
+      }
+    });
   },
 
   /**

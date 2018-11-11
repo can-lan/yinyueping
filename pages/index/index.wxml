@@ -51,68 +51,24 @@
     <text>歌手</text>
   </view>
 </view>
-<!--栏目预览-->
+<!--推荐歌单-->
 <view class='preview'>
-  <!--标题组件-->
-  <text>推荐歌单 ></text>
+  <!--标题-->
+  <view class='heading'>{{'<--'}} 推荐歌单 {{'-->'}}</view>
   <!--歌单组件-->
   <view class="sheets">
-    <view class='songSheets'>
-      <image src="/pages/image/songSheet1.jpg" mode="aspectFit"></image>
-      <text>我最大的遗憾,是你的遗憾与我有关</text>
-    </view>
-    <!--歌单组件-->
-    <view class='songSheets'>
-      <image src="/pages/image/songSheet2.jpg" mode="aspectFit"></image>
-      <text>我最大的遗憾,是你的遗憾与我有关</text>
-    </view>
-    <!--歌单组件-->
-    <view class='songSheets'>
-      <image src="/pages/image/songSheet3.jpg" mode="aspectFit"></image>
-      <text>我最大的遗憾,是你的遗憾与我有关</text>
-    </view>
-    <!--歌单组件-->
-    <view class='songSheets'>
-      <image src="/pages/image/songSheet4.jpg" mode="aspectFit"></image>
-      <text>我最大的遗憾,是你的遗憾与我有关</text>
-    </view>
-    <!--歌单组件-->
-    <view class='songSheets'>
-      <image src="/pages/image/songSheet5.jpg" mode="aspectFit"></image>
-      <text>我最大的遗憾,是你的遗憾与我有关</text>
-    </view>
-    <!--歌单组件-->
-    <view class='songSheets'>
-      <image src="/pages/image/songSheet6.jpg" mode="aspectFit"></image>
-      <text>我最大的遗憾,是你的遗憾与我有关</text>
-    </view>
-    <!--歌单组件-->
-    <view class='songSheets'>
-      <image src="/pages/image/songSheet7.jpg" mode="aspectFit"></image>
-      <text>我最大的遗憾,是你的遗憾与我有关</text>
-    </view>
-    <!--歌单组件-->
-    <view class='songSheets'>
-      <image src="/pages/image/songSheet8.jpg" mode="aspectFit"></image>
-      <text>我最大的遗憾,是你的遗憾与我有关</text>
-    </view>
-    <!--歌单组件-->
-    <view class='songSheets'>
-      <image src="/pages/image/songSheet9.jpg" mode="aspectFit"></image>
-      <text>我最大的遗憾,是你的遗憾与我有关</text>
+    <view class='songSheets' wx:for='{{list}}' wx:key='id' wx:if='{{index < 9}}' data-id='{{item.id}}'>
+      <image src="{{item.img}}" mode="aspectFit"></image>
+      <text>{{item.title}}</text>
     </view>
   </view>
 </view>
-<!--栏目预览-->
+<!--今日推荐-->
 <view class='preview'>
-  <!--标题组件-->
-  <text>每日推荐 ></text>
+  <view class='heading'>{{'<--'}} 推荐歌曲 {{'-->'}}</view>
   <!--歌曲组件-->
-  <song wx:for="{{song}}" wx:key='id' title='{{item.title}}' singer='{{item.singer}}' epname='{{item.epname}}' coverImgUrl='{{item.coverImgUrl}}' src='{{item.src}}' bindtap='local' wx:index='index' data-index='{{index}}' bindtap='local'></song>
-  <!--加载更多-->
-  <view class='load' style='margin-bottom:100rpx;'>
-    <text>加载更多</text>
-  </view>
-  <player title='{{playing.title}}' singer='{{playing.singer}}'></player>
+  <song wx:for="{{song}}" wx:key='id' wx:index='index' wx:if='{{index < 10}}' title='{{item.title}}' singer='{{item.singer}}' epname='{{item.epname}}' coverImgUrl='{{item.coverImgUrl}}' data-index='{{index}}' bindtap='song'></song>
 </view>
-
+  <!--播放器组件-->
+  <player title='{{playing.title}}' singer='{{playing.singer}}' coverImgUrl='{{playing.coverImgUrl}}' btnsrc='{{btnsrc}}' bindprev='prev' bindplayer='player' bindnext='next' bindlist='list'></player>
+<!--播放列表-->

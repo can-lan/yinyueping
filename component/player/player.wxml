@@ -1,13 +1,13 @@
 <view class='player'>
-  <image class='coverImgUrl' src='/pages/image/songSheet8.jpg' mode='aspectFit'></image>
+  <image class='coverImgUrl' src='{{coverImgUrl}}' mode='aspectFit'></image>
   <view class='info'>
     <text class='title'>{{title}}</text>
     <text class='singer'>{{singer}}</text>
   </view>
   <view class='btn'>
-    <image class='prev' src='/pages/image/prev.png' bindtap='prev' mode='aspectFit'></image>
-    <image class='play' src='/pages/image/play.png' bindtap='play' mode='aspectFit'></image>
-    <image class='next' src='/pages/image/next.png' bindtap='next' mode='aspectFit'></image>
-    <image class='list' src='/pages/image/list.png' bindtap='list' mode='aspectFit'></image>
+    <image class='prev' src='/pages/image/prev.png' mode='aspectFit' bindtap='prev'></image>
+    <image class='play' src='{{btnsrc}}' mode='aspectFit' bindtap='player'></image>
+    <image class='next' src='/pages/image/next.png' mode='aspectFit' bindtap='next'></image>
+    <image class='list' src='/pages/image/list.png' mode='aspectFit' bindtap='list'></image>
   </view>
 </view>

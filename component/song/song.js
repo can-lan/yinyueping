@@ -7,37 +7,29 @@ Component({
   properties: {
     title: {            // 属性名
       type: String,     // 类型（必填），目前接受的类型包括：String, Number, Boolean, Object, Array, null（表示任意类型）
-      value: 'Fragments'     // 属性初始值（可选），如果未指定则会根据类型选择一个
+      value: ''     // 属性初始值（可选），如果未指定则会根据类型选择一个
     },
     singer: {           
       type: String,     
-      value: '千坂'     
+      value: ''     
     },
     epname: {           
       type: String,     
-      value: 'Fragments'    
+      value: ''    
     },
     coverImgUrl: {            
       type: String,     
-      value: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000'     
+      value: ''     
     },
     src: {            
       type: String,     
-      value: 'http://www.zhuimi.co/img/Fragments.mp3'    
+      value: ''    
     },
   },
   data: {
 
   },
   methods: {
-    play: function (event) {
-      var e = event.currentTarget.dataset;
-      const bgm = wx.getBackgroundAudioManager()
-      bgm.title = e.title ;
-      bgm.epname = e.epname ;
-      bgm.singer = e.singer ;
-      bgm.coverImgUrl = e.coverImgUrl ;
-      bgm.src = e.src ;
-    }
+    
   }
 })

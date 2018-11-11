@@ -1,3 +1,6 @@
+page{
+  padding-bottom:100rpx;
+}
 /*栏目*/
 .column{
   width:100%;
@@ -21,9 +24,5 @@
 /*栏目预览*/
 .preview{
   width:100%;
-  margin-top:30rpx;
-}
-.preview>text{
-  margin:35rpx 15rpx;
-  font-weight:bold;
+  margin-top:25rpx;
 }
