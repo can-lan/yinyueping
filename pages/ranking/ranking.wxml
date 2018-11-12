@@ -1,46 +1,36 @@
 <!--排行榜组件-->
-<view class='rank'>
-  <image src='/pages/image/rank_heart.jpg' mode='aspectFit'></image>
+<view class='rank' bindtap='rank' data-rank='up'>
+  <image src='http://wx.yinyueping.com/image/rank/up.jpg' mode='aspectFit'></image>
   <view class='songs'>
-    <text>1.至此-房东的猫</text>
-    <text>2.年少有为-李荣浩</text>
-    <text>3.盗将行-花粥/马雨阳</text>
+    <text wx:for='{{up}}' wx:key='id' wx:index='index' wx:if="{{index<3}}">{{index+1}} . {{item.title}}</text>
   </view>
 </view>
 <!--排行榜组件-->
-<view class='rank'>
-  <image src='/pages/image/rank_hot.jpg' mode='aspectFit'></image>
+<view class='rank' bindtap='rank' data-rank='hot'>
+  <image src='http://wx.yinyueping.com/image/rank/hot.jpg' mode='aspectFit'></image>
   <view class='songs'>
-    <text>1.至此-房东的猫</text>
-    <text>2.年少有为-李荣浩</text>
-    <text>3.盗将行-花粥/马雨阳</text>
+    <text wx:for='{{hot}}' wx:key='id' wx:index='index' wx:if="{{index<3}}">{{index+1}} . {{item.title}}</text>
   </view>
 </view>
 <!--排行榜组件-->
-<view class='rank'>
-  <image src='/pages/image/rank_dance.jpg' mode='aspectFit'></image>
+<view class='rank' bindtap='rank' data-rank='new'>
+  <image src='http://wx.yinyueping.com/image/rank/new.jpg' mode='aspectFit'></image>
   <view class='songs'>
-    <text>1.至此-房东的猫</text>
-    <text>2.年少有为-李荣浩</text>
-    <text>3.盗将行-花粥/马雨阳</text>
+    <text wx:for='{{new}}' wx:key='id' wx:index='index' wx:if="{{index<3}}">{{index+1}} . {{item.title}}</text>
   </view>
 </view>
 <!--排行榜组件-->
-<view class='rank'>
-  <image src='/pages/image/rank_game.jpg' mode='aspectFit'></image>
+<view class='rank' bindtap='rank' data-rank='game'>
+  <image src='http://wx.yinyueping.com/image/rank/game.jpg' mode='aspectFit'></image>
   <view class='songs'>
-    <text>1.至此-房东的猫</text>
-    <text>2.年少有为-李荣浩</text>
-    <text>3.盗将行-花粥/马雨阳</text>
+    <text wx:for='{{game}}' wx:key='id' wx:index='index' wx:if="{{index<3}}">{{index+1}} . {{item.title}}</text>
   </view>
 </view>
 <!--排行榜组件-->
-<view class='rank'>
-  <image src='/pages/image/rank_dy.jpg' mode='aspectFit'></image>
+<view class='rank' bindtap='rank' data-rank='dy'>
+  <image src='http://wx.yinyueping.com/image/rank/dy.jpg' mode='aspectFit'></image>
   <view class='songs'>
-    <text>1.至此-房东的猫</text>
-    <text>2.年少有为-李荣浩</text>
-    <text>3.盗将行-花粥/马雨阳</text>
+    <text wx:for='{{dy}}' wx:key='id' wx:index='index' wx:if="{{index<3}}">{{index+1}} . {{item.title}}</text>
   </view>
 </view>
 <!--全球榜-->
@@ -48,49 +38,49 @@
   <text>全球榜</text>
 </view>
 <!--歌单组件-->
-  <view class="sheets">
+  <view class="sheets" bindtap='ranks' data-rank='8' data-title='ACG音乐榜'>
     <view class='songSheets'>
-      <image src="/pages/image/rank8.jpg" mode="aspectFit"></image>
+      <image src="http://wx.yinyueping.com/image/rank/rank8.jpg" mode="aspectFit"></image>
       <text>ACG音乐榜</text>
     </view>
     <!--歌单组件-->
-    <view class='songSheets'>
-      <image src="/pages/image/rank2.jpg" mode="aspectFit"></image>
+    <view class='songSheets' bindtap='ranks' data-rank='2' data-title='古典音乐榜'>
+      <image src="http://wx.yinyueping.com/image/rank/rank2.jpg" mode="aspectFit"></image>
       <text>古典音乐榜</text>
     </view>
     <!--歌单组件-->
-    <view class='songSheets'>
-      <image src="/pages/image/rank9.jpg" mode="aspectFit"></image>
+    <view class='songSheets' bindtap='ranks' data-rank='9' data-title='YY音乐榜'>
+      <image src="http://wx.yinyueping.com/image/rank/rank9.jpg" mode="aspectFit"></image>
       <text>YY音乐榜</text>
     </view>
     <!--歌单组件-->
-    <view class='songSheets'>
-      <image src="/pages/image/rank4.jpg" mode="aspectFit"></image>
+    <view class='songSheets' bindtap='ranks' data-rank='4' data-title='美国Billboard周榜'>
+      <image src="http://wx.yinyueping.com/image/rank/rank4.jpg" mode="aspectFit"></image>
       <text>美国Billboard周榜</text>
     </view>
     <!--歌单组件-->
-    <view class='songSheets'>
-      <image src="/pages/image/rank5.jpg" mode="aspectFit"></image>
+    <view class='songSheets' bindtap='ranks' data-rank='5' data-title='UK排行榜周榜'>
+      <image src="http://wx.yinyueping.com/image/rank/rank5.jpg" mode="aspectFit"></image>
       <text>UK排行榜周榜</text>
     </view>
     <!--歌单组件-->
-    <view class='songSheets'>
-      <image src="/pages/image/rank6.jpg" mode="aspectFit"></image>
+    <view class='songSheets' bindtap='ranks' data-rank='6' data-title='全球电子舞曲榜'>
+      <image src="http://wx.yinyueping.com/image/rank/rank6.jpg" mode="aspectFit"></image>
       <text>全球电子舞曲榜</text>
     </view>
     <!--歌单组件-->
-    <view class='songSheets'>
-      <image src="/pages/image/rank7.jpg" mode="aspectFit"></image>
+    <view class='songSheets' bindtap='ranks' data-rank='7' data-title='说唱榜'>
+      <image src="http://wx.yinyueping.com/image/rank/rank7.jpg" mode="aspectFit"></image>
       <text>说唱榜</text>
     </view>
     <!--歌单组件-->
-    <view class='songSheets'>
-      <image src="/pages/image/rank1.jpg" mode="aspectFit"></image>
+    <view class='songSheets' bindtap='ranks' data-rank='1' data-title='中国TOP排行榜'>
+      <image src="http://wx.yinyueping.com/image/rank/rank1.jpg" mode="aspectFit"></image>
       <text>中国TOP排行榜</text>
     </view>
     <!--歌单组件-->
-    <view class='songSheets'>
-      <image src="/pages/image/rank3.jpg" mode="aspectFit"></image>
+    <view class='songSheets' bindtap='ranks' data-rank='3' data-title='iTunes榜'>
+      <image src="http://wx.yinyueping.com/image/rank/rank3.jpg" mode="aspectFit"></image>
       <text>iTunes榜</text>
     </view>
     </view>

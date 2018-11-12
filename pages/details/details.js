@@ -16,15 +16,13 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {  //没有歌手
-    if(!options.singer){
-     
+  onLoad: function (options) {  
+    if (!options.singer && !options.rank && !options.ranks) {  //没有歌手 且 没有排行榜 且 没有其他排行榜 说明是歌单页进入
       var id=options.id;
       /*请求该歌单信息*/
       wx.request({
         url: 'http://wx.yinyueping.com:7002/list?id=' + id,
         success: (res) => {
-        
           this.setData({
             list: res.data[0]
           });
@@ -46,11 +44,12 @@ Page({
       var id = options.id;
       /*请求该歌单信息*/
       wx.request({
-        url: 'http://wx.yinyueping.com:7002/singer?id=' + id,
+        url: 'http://wx.yinyueping.com:7002/singer?id=' + id, //查询该歌手信息
         success: (res) => {
-          console.log(res)
+          var obj=res.data[0];
+          obj.title=obj.singer
           this.setData({
-            list: res.data[0]
+            list: obj
           });
         }
       });
@@ -58,7 +57,78 @@ Page({
       wx.request({
         url: 'http://wx.yinyueping.com:7002/song/singer?singer=' + singer,
         success: (res) => {
-          console.log(res)
+          this.setData({
+            song: res.data
+          });
+        }
+      });
+    }
+    if(options.rank){ //有排行榜
+      var rank=options.rank;
+      switch(rank){
+        case 'up':
+          var list={};
+          list.title='飙升榜';
+          list.img='http://wx.yinyueping.com/image/rank/up.jpg';
+          this.setData({
+            list:list
+          });
+          break;
+        case 'hot':
+          var list = {};
+          list.title = '热歌榜';
+          list.img = 'http://wx.yinyueping.com/image/rank/hot.jpg';
+          this.setData({
+            list: list
+          });
+          break;
+        case 'new':
+          var list = {};
+          list.title = '新歌榜';
+          list.img = 'http://wx.yinyueping.com/image/rank/new.jpg';
+          this.setData({
+            list: list
+          });
+          break;
+        case 'game':
+          var list = {};
+          list.title = '电竞榜';
+          list.img = 'http://wx.yinyueping.com/image/rank/game.jpg';
+          this.setData({
+            list: list
+          });
+          break;
+        case 'dy':
+          var list = {};
+          list.title = '抖音榜';
+          list.img = 'http://wx.yinyueping.com/image/rank/dy.jpg';
+          this.setData({
+            list: list
+          });
+          break;
+      }
+      /*请求该榜单歌曲*/
+      wx.request({
+        url:'http://wx.yinyueping.com:7002/song/rank?rank='+rank,
+        success:(res)=>{
+          this.setData({
+            song:res.data
+          });
+        }
+      });
+    }
+    if(options.ranks){  //有其他排行榜
+      var rank=options.ranks;
+      var list={};
+      list.title=options.title;
+      list.img='http://wx.yinyueping.com/image/rank/rank'+rank+'.jpg';
+      this.setData({
+        list:list
+      });
+      /*请求该榜单歌曲*/
+      wx.request({
+        url: 'http://wx.yinyueping.com:7002/song/rank?rank=new',
+        success: (res) => {
           this.setData({
             song: res.data
           });

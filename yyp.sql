@@ -18,7 +18,8 @@ CREATE TABLE yyp_song(
   epname VARCHAR(16),
   coverImgUrl VARCHAR(128), #封面图
   src VARCHAR(128),         #歌曲地址
-  list INT DEFAULT 10 #所属歌单id
+  list INT DEFAULT 10, #所属歌单id
+  rank VARCHAR(16) DEFAULT 'new' #所属榜单
 );
 /*歌单表*/
 CREATE TABLE yyp_list(
@@ -38,21 +39,21 @@ CREATE TABLE yyp_singer(
 
 /*歌曲表数据*/
 INSERT INTO yyp_song VALUES
-(null,'Fragments','千坂','Fragments','http://wx.yinyueping.com/image/song/fragments.jpg','http://wx.yinyueping.com/song/fragments.mp3',DEFAULT),
-(null,'卡农','千坂','Fragments','http://wx.yinyueping.com/image/song/kn.jpg','http://wx.yinyueping.com/song/kn.mp3',DEFAULT),
-(null,'我喜欢上你时的内心活动','陈绮贞','Fragments','http://wx.yinyueping.com/image/song/wxhsnsdnxhd.jpg','http://wx.yinyueping.com/song/wxhsnsdnxhd.mp3',DEFAULT),
-(null,'不完美女孩','周冬雨','Fragments','http://wx.yinyueping.com/image/song/bwmnh.jpg','http://wx.yinyueping.com/song/bwmnh.mp3',DEFAULT),
-(null,'稻香','周杰伦','Fragments','http://wx.yinyueping.com/image/song/dx.jpg','http://wx.yinyueping.com/song/dx.mp3',DEFAULT),
-(null,'Fragments','千坂','Fragments','http://wx.yinyueping.com/image/song/fragments.jpg','http://wx.yinyueping.com/song/fragments.mp3',DEFAULT),
-(null,'卡农','千坂','Fragments','http://wx.yinyueping.com/image/song/kn.jpg','http://wx.yinyueping.com/song/kn.mp3',DEFAULT),
-(null,'我喜欢上你时的内心活动','陈绮贞','Fragments','http://wx.yinyueping.com/image/song/wxhsnsdnxhd.jpg','http://wx.yinyueping.com/song/wxhsnsdnxhd.mp3',DEFAULT),
-(null,'不完美女孩','周冬雨','Fragments','http://wx.yinyueping.com/image/song/bwmnh.jpg','http://wx.yinyueping.com/song/bwmnh.mp3',DEFAULT),
-(null,'稻香','周杰伦','Fragments','http://wx.yinyueping.com/image/song/dx.jpg','http://wx.yinyueping.com/song/dx.mp3',DEFAULT),
-(null,'Fragments','千坂','Fragments','http://wx.yinyueping.com/image/song/fragments.jpg','http://wx.yinyueping.com/song/fragments.mp3',DEFAULT),
-(null,'卡农','千坂','Fragments','http://wx.yinyueping.com/image/song/kn.jpg','http://wx.yinyueping.com/song/kn.mp3',DEFAULT),
-(null,'我喜欢上你时的内心活动','陈绮贞','Fragments','http://wx.yinyueping.com/image/song/wxhsnsdnxhd.jpg','http://wx.yinyueping.com/song/wxhsnsdnxhd.mp3',DEFAULT),
-(null,'不完美女孩','周冬雨','Fragments','http://wx.yinyueping.com/image/song/bwmnh.jpg','http://wx.yinyueping.com/song/bwmnh.mp3',DEFAULT),
-(null,'稻香','周杰伦','Fragments','http://wx.yinyueping.com/image/song/dx.jpg','http://wx.yinyueping.com/song/dx.mp3',DEFAULT);
+(null,'Fragments','千坂','Fragments','http://wx.yinyueping.com/image/song/fragments.jpg','http://wx.yinyueping.com/song/fragments.mp3',DEFAULT,'up'),
+(null,'卡农','千坂','Fragments','http://wx.yinyueping.com/image/song/kn.jpg','http://wx.yinyueping.com/song/kn.mp3',DEFAULT,'hot'),
+(null,'我喜欢上你时的内心活动','陈绮贞','Fragments','http://wx.yinyueping.com/image/song/wxhsnsdnxhd.jpg','http://wx.yinyueping.com/song/wxhsnsdnxhd.mp3',DEFAULT,'new'),
+(null,'不完美女孩','周冬雨','Fragments','http://wx.yinyueping.com/image/song/bwmnh.jpg','http://wx.yinyueping.com/song/bwmnh.mp3',DEFAULT,'game'),
+(null,'稻香','周杰伦','Fragments','http://wx.yinyueping.com/image/song/dx.jpg','http://wx.yinyueping.com/song/dx.mp3',DEFAULT,'dy'),
+(null,'Fragments','千坂','Fragments','http://wx.yinyueping.com/image/song/fragments.jpg','http://wx.yinyueping.com/song/fragments.mp3',DEFAULT,DEFAULT),
+(null,'卡农','千坂','Fragments','http://wx.yinyueping.com/image/song/kn.jpg','http://wx.yinyueping.com/song/kn.mp3',DEFAULT,DEFAULT),
+(null,'我喜欢上你时的内心活动','陈绮贞','Fragments','http://wx.yinyueping.com/image/song/wxhsnsdnxhd.jpg','http://wx.yinyueping.com/song/wxhsnsdnxhd.mp3',DEFAULT,DEFAULT),
+(null,'不完美女孩','周冬雨','Fragments','http://wx.yinyueping.com/image/song/bwmnh.jpg','http://wx.yinyueping.com/song/bwmnh.mp3',DEFAULT,DEFAULT),
+(null,'稻香','周杰伦','Fragments','http://wx.yinyueping.com/image/song/dx.jpg','http://wx.yinyueping.com/song/dx.mp3',DEFAULT,DEFAULT),
+(null,'Fragments','千坂','Fragments','http://wx.yinyueping.com/image/song/fragments.jpg','http://wx.yinyueping.com/song/fragments.mp3',DEFAULT,DEFAULT),
+(null,'卡农','千坂','Fragments','http://wx.yinyueping.com/image/song/kn.jpg','http://wx.yinyueping.com/song/kn.mp3',DEFAULT,DEFAULT),
+(null,'我喜欢上你时的内心活动','陈绮贞','Fragments','http://wx.yinyueping.com/image/song/wxhsnsdnxhd.jpg','http://wx.yinyueping.com/song/wxhsnsdnxhd.mp3',DEFAULT,DEFAULT),
+(null,'不完美女孩','周冬雨','Fragments','http://wx.yinyueping.com/image/song/bwmnh.jpg','http://wx.yinyueping.com/song/bwmnh.mp3',DEFAULT,DEFAULT),
+(null,'稻香','周杰伦','Fragments','http://wx.yinyueping.com/image/song/dx.jpg','http://wx.yinyueping.com/song/dx.mp3',DEFAULT,DEFAULT);
 /*歌单表数据*/
 INSERT INTO yyp_list VALUES
 (null,'你以为我不会走,我以为你会留','http://wx.yinyueping.com/image/list/list1.jpg','音乐瓶',DEFAULT),
