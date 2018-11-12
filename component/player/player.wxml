@@ -8,6 +8,6 @@
     <image class='prev' src='/pages/image/prev.png' mode='aspectFit' bindtap='prev'></image>
     <image class='play' src='{{btnsrc}}' mode='aspectFit' bindtap='player'></image>
     <image class='next' src='/pages/image/next.png' mode='aspectFit' bindtap='next'></image>
-    <image class='list' src='/pages/image/list.png' mode='aspectFit' bindtap='list'></image>
+    <image class='list' src='/pages/image/list.png' mode='aspectFit' bindtap='playlist'></image>
   </view>
 </view>

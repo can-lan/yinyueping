@@ -1,7 +1,7 @@
 <!--歌单组件-->
   <view class="sheets">
     <!--歌手-->
-    <view class='songSheets' wx:for='{{singer}}' wx:key='{{id}}' data-id='{{id}}'>
+    <view class='songSheets' wx:for='{{singer}}' wx:key='{{id}}' data-id='{{item.id}}' data-singer='{{item.singer}}' bindtap='singer'>
       <image src="{{item.img}}" mode="widthFix"></image>
       <text>{{item.singer}}</text>
     </view>

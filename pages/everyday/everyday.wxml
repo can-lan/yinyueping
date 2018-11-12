@@ -9,10 +9,15 @@
     <text>播放全部</text>
   </view>
 </view>
-<!--歌曲组件-->
-  <song wx:for='{{song}}' wx:key='{{id}}' title='{{item.title}}' singer='{{item.singer}}' epname='{{item.epname}}' coverImgUrl='{{item.coverImgUrl}}' bindtap='loadPlayer' data-title='{{}}' data-singer='{{}}'></song>
+  <!--歌曲组件-->
+  <song wx:for="{{song}}" wx:key='id' wx:index='index' title='{{item.title}}' singer='{{item.singer}}' epname='{{item.epname}}' coverImgUrl='{{item.coverImgUrl}}' data-index='{{index}}' bindtap='song'></song>
+  <!--播放器组件-->
+  <player title='{{playing.title}}' singer='{{playing.singer}}' coverImgUrl='{{playing.coverImgUrl}}' btnsrc='{{btnsrc}}' bindprev='prev' bindplayer='player' bindnext='next' bindplaylist='playlist'></player>
+  <!--播放列表-->
+  <view class='playlist {{playlist}}'>
+    <view wx:for='{{song}}' wx:key='id' wx:index='index' data-index='{{index}}' bindtap='song'>{{item.title}} - {{item.singer}}</view>
+  </view>
   <!--加载更多
   <view class='load'>
     <text>加载更多</text>
   </view>-->
-  <player title='{{playing.title}}' singer='{{playing.singer}}'></player>

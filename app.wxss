@@ -124,3 +124,26 @@ view.heading{
   top:40%;
   left:90%;
 }
+/*播放器列表*/
+.playlist{
+  width:100%;
+  position:fixed;
+  bottom:0;
+  overflow:auto;
+  background:rgba(72,104,104,.9);
+  transition: all .4s ease-out;
+}
+.playlist>view{
+  width:100%;
+  height:70rpx;
+  line-height:70rpx;
+  padding-left:20rpx;
+  font-size:14px;
+  border-bottom:1rpx dashed #999;
+}
+.playlist.hidden{
+  height:0rpx;
+}
+.playlist.show{
+  height:600rpx;
+}

@@ -17,6 +17,7 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#45ADC6",
     "navigationBarTitleText": "音乐瓶",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
   }
 }

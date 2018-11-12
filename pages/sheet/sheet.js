@@ -69,5 +69,13 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /*点击歌单事件*/
+  list: function (event) {
+    var e = event.currentTarget.dataset;
+    var id = e.id;
+    wx.navigateTo({
+      url: '/pages/details/details?id=' + id,
+    });
   }
 })

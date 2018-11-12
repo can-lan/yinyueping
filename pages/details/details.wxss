@@ -1,5 +1,5 @@
 page{
-  padding-bottom:30rpx;
+  padding-bottom:100rpx;
 }
 /*歌单信息*/
 .details{
@@ -7,7 +7,7 @@ page{
   padding:10rpx;
 }
 .details>image{
-  width:200rpx;
+  width:200rpx !important;
   height:200rpx;
   border-radius:10rpx;
 }
@@ -29,7 +29,7 @@ page{
   margin-bottom:20rpx;
 }
 .title{
-  font-size:16px;
+  font-size:14px;
   font-weight:500;
   color:#fff;
 }

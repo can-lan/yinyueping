@@ -32,6 +32,6 @@ Component({
     player:function(){this.triggerEvent('player')},
     prev:function(){this.triggerEvent('prev')},
     next:function(){this.triggerEvent('next')},
-    list:function(){this.triggerEvent('list')}
+    playlist:function(){this.triggerEvent('playlist')}
   }
 })

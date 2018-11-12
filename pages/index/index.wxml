@@ -1,4 +1,4 @@
-<!--导航栏-->
+        <!--导航栏-->
 <view class='nav'>
   <navigator class="info">
     <image src='/pages/image/admin.png' mode='aspectFit'></image>
@@ -53,11 +53,10 @@
 </view>
 <!--推荐歌单-->
 <view class='preview'>
-  <!--标题-->
   <view class='heading'>{{'<--'}} 推荐歌单 {{'-->'}}</view>
   <!--歌单组件-->
   <view class="sheets">
-    <view class='songSheets' wx:for='{{list}}' wx:key='id' wx:if='{{index < 9}}' data-id='{{item.id}}'>
+    <view class='songSheets' wx:for='{{list}}' wx:key='id' wx:if='{{index < 9}}' data-id='{{item.id}}' bindtap='list'>
       <image src="{{item.img}}" mode="aspectFit"></image>
       <text>{{item.title}}</text>
     </view>
@@ -70,5 +69,8 @@
   <song wx:for="{{song}}" wx:key='id' wx:index='index' wx:if='{{index < 10}}' title='{{item.title}}' singer='{{item.singer}}' epname='{{item.epname}}' coverImgUrl='{{item.coverImgUrl}}' data-index='{{index}}' bindtap='song'></song>
 </view>
   <!--播放器组件-->
-  <player title='{{playing.title}}' singer='{{playing.singer}}' coverImgUrl='{{playing.coverImgUrl}}' btnsrc='{{btnsrc}}' bindprev='prev' bindplayer='player' bindnext='next' bindlist='list'></player>
+  <player title='{{playing.title}}' singer='{{playing.singer}}' coverImgUrl='{{playing.coverImgUrl}}' btnsrc='{{btnsrc}}' bindprev='prev' bindplayer='player' bindnext='next' bindplaylist='playlist'></player>
 <!--播放列表-->
+<view class='playlist {{playlist}}'>
+  <view wx:for='{{song}}' wx:key='id' wx:index='index' wx:if='{{index < 10}}' data-index='{{index}}'  bindtap='song'>{{item.title}} - {{item.singer}}</view>
+</view>

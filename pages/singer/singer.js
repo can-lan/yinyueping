@@ -69,5 +69,14 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /*点击歌手,跳转歌手主页*/
+  singer:function(event){
+    var e = event.currentTarget.dataset;
+    var id = e.id;
+    var singer=e.singer;
+    wx.navigateTo({
+      url: '/pages/details/details?singer=' + singer +'&id='+id,
+    });
   }
 })

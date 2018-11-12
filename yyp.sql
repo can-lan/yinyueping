@@ -18,14 +18,15 @@ CREATE TABLE yyp_song(
   epname VARCHAR(16),
   coverImgUrl VARCHAR(128), #封面图
   src VARCHAR(128),         #歌曲地址
-  list INT DEFAULT 0 #所属歌单id
+  list INT DEFAULT 10 #所属歌单id
 );
 /*歌单表*/
 CREATE TABLE yyp_list(
   id INT PRIMARY KEY AUTO_INCREMENT,
   title VARCHAR(32),
   img VARCHAR(128),
-  author VARCHAR(16)
+  author VARCHAR(16),
+  photo VARCHAR(128) DEFAULT 'http://wx.yinyueping.com/image/user/default.jpg' #默认作者头像
 );
 /*歌手表*/
 CREATE TABLE yyp_singer(
@@ -54,16 +55,16 @@ INSERT INTO yyp_song VALUES
 (null,'稻香','周杰伦','Fragments','http://wx.yinyueping.com/image/song/dx.jpg','http://wx.yinyueping.com/song/dx.mp3',DEFAULT);
 /*歌单表数据*/
 INSERT INTO yyp_list VALUES
-(null,'你以为我不会走,我以为你会留','http://wx.yinyueping.com/image/list/list1.jpg','音乐瓶'),
-(null,'我最大的遗憾,是你的遗憾与我有关','http://wx.yinyueping.com/image/list/list2.jpg','音乐瓶'),
-(null,'希望十八岁你爱的人是八十岁在你身边的人','http://wx.yinyueping.com/image/list/list3.jpg','音乐瓶'),
-(null,'怀旧向||时光流转从前,人生如寄','http://wx.yinyueping.com/image/list/list4.jpg','音乐瓶'),
-(null,'浮生有梦三千场 穷尽千里诗酒慌','http://wx.yinyueping.com/image/list/list5.jpg','音乐瓶'),
-(null,'我爱你的100种表达方式','http://wx.yinyueping.com/image/list/list6.jpg','音乐瓶'),
-(null,'全球史诗级万评电音','http://wx.yinyueping.com/image/list/list7.jpg','音乐瓶'),
-(null,'这都是什么神仙翻唱','http://wx.yinyueping.com/image/list/list8.jpg','音乐瓶'),
-(null,'听了几个故事,正好讲给你玩','http://wx.yinyueping.com/image/list/list9.jpg','音乐瓶'),
-(null,'若是心怀旧梦 就别无疾而终','http://wx.yinyueping.com/image/list/list10.jpg','音乐瓶');
+(null,'你以为我不会走,我以为你会留','http://wx.yinyueping.com/image/list/list1.jpg','音乐瓶',DEFAULT),
+(null,'我最大的遗憾,是你的遗憾与我有关','http://wx.yinyueping.com/image/list/list2.jpg','音乐瓶',DEFAULT),
+(null,'希望十八岁你爱的人是八十岁在你身边的人','http://wx.yinyueping.com/image/list/list3.jpg','音乐瓶',DEFAULT),
+(null,'怀旧向||时光流转从前,人生如寄','http://wx.yinyueping.com/image/list/list4.jpg','音乐瓶',DEFAULT),
+(null,'浮生有梦三千场 穷尽千里诗酒慌','http://wx.yinyueping.com/image/list/list5.jpg','音乐瓶',DEFAULT),
+(null,'我爱你的100种表达方式','http://wx.yinyueping.com/image/list/list6.jpg','音乐瓶',DEFAULT),
+(null,'全球史诗级万评电音','http://wx.yinyueping.com/image/list/list7.jpg','音乐瓶',DEFAULT),
+(null,'这都是什么神仙翻唱','http://wx.yinyueping.com/image/list/list8.jpg','音乐瓶',DEFAULT),
+(null,'听了几个故事,正好讲给你玩','http://wx.yinyueping.com/image/list/list9.jpg','音乐瓶',DEFAULT),
+(null,'若是心怀旧梦 就别无疾而终','http://wx.yinyueping.com/image/list/list10.jpg','音乐瓶',DEFAULT);
 /*歌手表数据*/
 INSERT INTO yyp_singer VALUES
 (null,'Vicetont','http://wx.yinyueping.com/image/singer/singer1.jpg'),

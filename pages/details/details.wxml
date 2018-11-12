@@ -1,11 +1,11 @@
 <view class='bg-blur'>
   <view class='details'>
-    <image src='/pages/image/songSheet1.jpg'></image>
+    <image src='{{list.img}}'></image>
     <view class='sheetInfo'>
-      <text class='title'>歌单名称</text>
+      <text class='title'>{{list.title}}</text>
       <view>
-        <image src='/pages/image/songSheet10.jpg' mode='aspectFit'></image>
-        <text>用户名字</text>
+        <image src='{{list.photo}}' mode='aspectFit'></image>
+        <text>{{list.author}}</text>
       </view>
     </view>
   </view>
@@ -31,139 +31,15 @@
 <!--歌单歌曲-->
 <view class='play'>
   <view>
-    <image src='/pages/image/start.png' mode='aspectFit'></image>
+    <image src='http:wx.yinyueping.com/image/app/start.png' mode='aspectFit'></image>
     <text>播放全部</text>
   </view>
-  <view>
-    <image src='/pages/image/list0.png' mode='aspectFit'></image>
-    <text>多选</text>
-  </view>
 </view>
-<!--歌曲组件-->
-  <view class='song'>
-    <image src="/pages/image/songImg.png" mode="widthFix"></image>
-    <view class='songInfo'>
-      <view class='songLeft'>
-        <text class='title'>年少有为</text>
-        <text class='singer'>李荣浩-耳朵</text>
-      </view>
-      <view class='songRight'>
-      <image src="/pages/image/news.png" mode="widthFix"></image>
-      <image src="/pages/image/detail.png"  mode="widthFix"></image>
-      </view>
-    </view>
-  </view>
   <!--歌曲组件-->
-  <view class='song'>
-    <image src="/pages/image/songImg.png" mode="widthFix"></image>
-    <view class='songInfo'>
-      <view class='songLeft'>
-        <text class='title'>年少有为</text>
-        <text class='singer'>李荣浩-耳朵</text>
-      </view>
-      <view class='songRight'>
-      <image src="/pages/image/news.png" mode="widthFix"></image>
-      <image src="/pages/image/detail.png"  mode="widthFix"></image>
-      </view>
-    </view>
+  <song wx:for="{{song}}" wx:key='id' wx:index='index' wx:if='{{index < 10}}' title='{{item.title}}' singer='{{item.singer}}' epname='{{item.epname}}' coverImgUrl='{{item.coverImgUrl}}' data-index='{{index}}' bindtap='song'></song>
+  <!--播放器组件-->
+  <player title='{{playing.title}}' singer='{{playing.singer}}' coverImgUrl='{{playing.coverImgUrl}}' btnsrc='{{btnsrc}}' bindprev='prev' bindplayer='player' bindnext='next' bindplaylist='playlist'></player>
+  <!--播放列表-->
+  <view class='playlist {{playlist}}'>
+    <view wx:for='{{song}}' wx:key='id' wx:index='index' wx:if='{{index < 10}}' data-index='{{index}}'  bindtap='song'>{{item.title}} - {{item.singer}}</view>
   </view>
-  <!--歌曲组件-->
-  <view class='song'>
-    <image src="/pages/image/songImg.png" mode="widthFix"></image>
-    <view class='songInfo'>
-      <view class='songLeft'>
-        <text class='title'>年少有为</text>
-        <text class='singer'>李荣浩-耳朵</text>
-      </view>
-      <view class='songRight'>
-      <image src="/pages/image/news.png" mode="widthFix"></image>
-      <image src="/pages/image/detail.png"  mode="widthFix"></image>
-      </view>
-    </view>
-  </view>
-  <!--歌曲组件-->
-  <view class='song'>
-    <image src="/pages/image/songImg.png" mode="widthFix"></image>
-    <view class='songInfo'>
-      <view class='songLeft'>
-        <text class='title'>年少有为</text>
-        <text class='singer'>李荣浩-耳朵</text>
-      </view>
-      <view class='songRight'>
-      <image src="/pages/image/news.png" mode="widthFix"></image>
-      <image src="/pages/image/detail.png"  mode="widthFix"></image>
-      </view>
-    </view>
-  </view>
-  <!--歌曲组件-->
-  <view class='song'>
-    <image src="/pages/image/songImg.png" mode="widthFix"></image>
-    <view class='songInfo'>
-      <view class='songLeft'>
-        <text class='title'>年少有为</text>
-        <text class='singer'>李荣浩-耳朵</text>
-      </view>
-      <view class='songRight'>
-      <image src="/pages/image/news.png" mode="widthFix"></image>
-      <image src="/pages/image/detail.png"  mode="widthFix"></image>
-      </view>
-    </view>
-  </view>
-  <!--歌曲组件-->
-  <view class='song'>
-    <image src="/pages/image/songImg.png" mode="widthFix"></image>
-    <view class='songInfo'>
-      <view class='songLeft'>
-        <text class='title'>年少有为</text>
-        <text class='singer'>李荣浩-耳朵</text>
-      </view>
-      <view class='songRight'>
-      <image src="/pages/image/news.png" mode="widthFix"></image>
-      <image src="/pages/image/detail.png"  mode="widthFix"></image>
-      </view>
-    </view>
-  </view>
-  <!--歌曲组件-->
-  <view class='song'>
-    <image src="/pages/image/songImg.png" mode="widthFix"></image>
-    <view class='songInfo'>
-      <view class='songLeft'>
-        <text class='title'>年少有为</text>
-        <text class='singer'>李荣浩-耳朵</text>
-      </view>
-      <view class='songRight'>
-      <image src="/pages/image/news.png" mode="widthFix"></image>
-      <image src="/pages/image/detail.png"  mode="widthFix"></image>
-      </view>
-    </view>
-  </view>
-  <!--歌曲组件-->
-  <view class='song'>
-    <image src="/pages/image/songImg.png" mode="widthFix"></image>
-    <view class='songInfo'>
-      <view class='songLeft'>
-        <text class='title'>年少有为</text>
-        <text class='singer'>李荣浩-耳朵</text>
-      </view>
-      <view class='songRight'>
-      <image src="/pages/image/news.png" mode="widthFix"></image>
-      <image src="/pages/image/detail.png"  mode="widthFix"></image>
-      </view>
-    </view>
-  </view>
-  <!--歌曲组件-->
-  <view class='song'>
-    <image src="/pages/image/songImg.png" mode="widthFix"></image>
-    <view class='songInfo'>
-      <view class='songLeft'>
-        <text class='title'>年少有为</text>
-        <text class='singer'>李荣浩-耳朵</text>
-      </view>
-      <view class='songRight'>
-      <image src="/pages/image/news.png" mode="widthFix"></image>
-      <image src="/pages/image/detail.png"  mode="widthFix"></image>
-      </view>
-    </view>
-  </view>
-  <!--歌曲组件-->
- <song></song>
