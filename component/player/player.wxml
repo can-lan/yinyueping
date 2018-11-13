@@ -5,9 +5,9 @@
     <text class='singer'>{{singer}}</text>
   </view>
   <view class='btn'>
-    <image class='prev' src='/pages/image/prev.png' mode='aspectFit' bindtap='prev'></image>
+    <image class='prev' src='http://wx.yinyueping.com/image/app/prev.png' mode='aspectFit' bindtap='prev'></image>
     <image class='play' src='{{btnsrc}}' mode='aspectFit' bindtap='player'></image>
-    <image class='next' src='/pages/image/next.png' mode='aspectFit' bindtap='next'></image>
-    <image class='list' src='/pages/image/list.png' mode='aspectFit' bindtap='playlist'></image>
+    <image class='next' src='http://wx.yinyueping.com/image/app/next.png' mode='aspectFit' bindtap='next'></image>
+    <image class='list' src='http://wx.yinyueping.com/image/app/list.png' mode='aspectFit' bindtap='playlist'></image>
   </view>
 </view>

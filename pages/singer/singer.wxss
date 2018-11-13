@@ -1,3 +1,6 @@
+page{
+  padding-top:30rpx;
+}
 .sheets image{
   border-radius:50%;
 }

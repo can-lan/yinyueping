@@ -11,19 +11,19 @@
   </view>
   <view class='toolbar'>
     <view>
-      <image src='/pages/image/comment.png'></image>
+      <image src='http://wx.yinyueping.com/image/app/comment.png'></image>
       <text>65</text>
     </view>
     <view>
-      <image src='/pages/image/share.png'></image>
+      <image src='http://wx.yinyueping.com/image/app/share.png'></image>
       <text>109</text>
     </view>
     <view>
-      <image src='/pages/image/down.png'></image>
+      <image src='http://wx.yinyueping.com/image/app/down.png'></image>
       <text>下载</text>
     </view>
     <view>
-      <image src='/pages/image/up.png'></image>
+      <image src='http://wx.yinyueping.com/image/app/up.png'></image>
       <text>赞</text>
     </view>
   </view>
@@ -31,7 +31,7 @@
 <!--歌单歌曲-->
 <view class='play'>
   <view>
-    <image src='http:wx.yinyueping.com/image/app/start.png' mode='aspectFit'></image>
+    <image src='http://wx.yinyueping.com/image/app/start.png' mode='aspectFit'></image>
     <text>播放全部</text>
   </view>
 </view>
@@ -42,4 +42,5 @@
   <!--播放列表-->
   <view class='playlist {{playlist}}'>
     <view wx:for='{{song}}' wx:key='id' wx:index='index' wx:if='{{index < 10}}' data-index='{{index}}'  bindtap='song'>{{item.title}} - {{item.singer}}</view>
+    <image src='http://wx.yinyueping.com/image/app/close.png' class='close' mode='aspectFit' bindtap='close'></image>
   </view>

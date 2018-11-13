@@ -1,86 +1,35 @@
 <!--导航栏-->
 <view class='nav'>
-  <navigator class="info">
-    <image src='/pages/image/admin.png' mode='aspectFit'></image>
-  </navigator>
-  <navigator class="list">
-    <image src='/pages/image/list.png' mode='aspectFit'></image>
-  </navigator>
-  <navigator class='bottle'>
-    <image src='/pages/image/music.png' mode='aspectFit'></image>
-  </navigator>
-  <navigator class='news'>
-    <image src='/pages/image/news.png' mode='aspectFit'></image>
-  </navigator>
-  <navigator class='search'>
-    <image src='/pages/image/search.png' mode='aspectFit'></image>
-  </navigator>
+  <view>
+    <navigator class='search' url='/pages/search/search'>
+      <image src='http://wx.yinyueping.com/image/app/search.png' mode='aspectFit'></image>
+    </navigator>
+    <navigator class='bottle' url='/pages/index/index'>
+      <image src='http://wx.yinyueping.com/image/app/music.png' mode='aspectFit'></image>
+    </navigator>
+    <navigator class='news' url='/pages/news/news'>
+      <image src='http://wx.yinyueping.com/image/app/news.png' mode='aspectFit'></image>
+    </navigator>
+  </view>
 </view>
 <!--视频组件-->
-<view class='news'>
-  <video src='/pages/image/video/banner.mp4'></video>
-  <text>视频名称</text>
+<view class='news' wx:for='{{videos}}' wx:key='id' wx:index='index'>
+  <video src='{{item.src}}' objectFit='fill' controls='true' id='index{{index}}'>
+    <cover-image wx:if='{{index != num}}' src='http://wx.yinyueping.com/image/app/1.png'></cover-image>
+  </video>
+  <cover-image wx:if='{{index != num}}' src='http://wx.yinyueping.com/image/app/play.png' class='playbtn' data-index='{{index}}' bindtap='autoplay'></cover-image>
+  <text>{{item.title}}</text>
   <view class='videoInfo'>
     <view class='user'>
-      <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
-      <text>用户名</text>
+      <image src='http://wx.yinyueping.com/image/list/list9.jpg' mode='widthFix'></image>
+      <text>音乐瓶</text>
     </view>
     <view class='toolbar'>
-      <image src='/pages/image/up.png'></image>
-      <text>25</text>
-      <image src='/pages/image/comment.png'></image>
+      <image src='http://wx.yinyueping.com/image/app/up.png' mode='widthFix' bindtap='up' data-index='{{index}}'></image>
+      <text>{{up[index]}}</text>
+      <image src='http://wx.yinyueping.com/image/app/comment.png' mode='aspectFit'></image>
       <text>7</text>
     </view>
   </view>
 </view>
-<!--视频组件-->
-<view class='news'>
-  <video src='/pages/image/video/banner.mp4' controls='false'></video>
-  <text>视频名称</text>
-  <view class='videoInfo'>
-    <view class='user'>
-      <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
-      <text>用户名</text>
-    </view>
-    <view class='toolbar'>
-      <image src='/pages/image/up.png'></image>
-      <text>25</text>
-      <image src='/pages/image/comment.png'></image>
-      <text>7</text>
-    </view>
-  </view>
-</view>
-<!--视频组件-->
-<view class='news'>
-  <video src='/pages/image/video/banner.mp4' ></video>
-  <text>视频名称</text>
-  <view class='videoInfo'>
-    <view class='user'>
-      <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
-      <text>用户名</text>
-    </view>
-    <view class='toolbar'>
-      <image src='/pages/image/up.png'></image>
-      <text>25</text>
-      <image src='/pages/image/comment.png'></image>
-      <text>7</text>
-    </view>
-  </view>
-</view>
-<!--视频组件-->
-<view class='news'>
-  <video src='/pages/image/video/banner.mp4' ></video>
-  <text>视频名称</text>
-  <view class='videoInfo'>
-    <view class='user'>
-      <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
-      <text>用户名</text>
-    </view>
-    <view class='toolbar'>
-      <image src='/pages/image/up.png' mode='aspectFit'></image>
-      <text>25</text>
-      <image src='/pages/image/comment.png' mode='aspectFit'></image>
-      <text>7</text>
-    </view>
-  </view>
-</view>
+

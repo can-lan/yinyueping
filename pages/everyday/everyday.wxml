@@ -1,11 +1,11 @@
 <!--顶部图片-->
 <view class='banner'>
-  <image src='/pages/image/banner0.png'  mode='aspectFit'></image>
+  <image src='http://wx.yinyueping.com/image/banner/banner0.png'  mode='aspectFit'></image>
 </view>
 <!--播放全部标题-->
 <view class='play'>
   <view>
-    <image src='/pages/image/play.png' mode='aspectFit'></image>
+    <image src='http://wx.yinyueping.com/image/app/play.png' mode='aspectFit'></image>
     <text>播放全部</text>
   </view>
 </view>
@@ -16,6 +16,7 @@
   <!--播放列表-->
   <view class='playlist {{playlist}}'>
     <view wx:for='{{song}}' wx:key='id' wx:index='index' data-index='{{index}}' bindtap='song'>{{item.title}} - {{item.singer}}</view>
+    <image src='http://wx.yinyueping.com/image/app/close.png' class='close' mode='aspectFit' bindtap='close'></image>
   </view>
   <!--加载更多
   <view class='load'>

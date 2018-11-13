@@ -1,20 +1,16 @@
-        <!--导航栏-->
+<!--导航栏-->
 <view class='nav'>
-  <navigator class="info">
-    <image src='/pages/image/admin.png' mode='aspectFit'></image>
-  </navigator>
-  <navigator class="list" url='/pages/list/list'>
-    <image src='/pages/image/list.png' mode='aspectFit'></image>
-  </navigator>
-  <navigator class='bottle' url='/pages/index/index'>
-    <image src='/pages/image/music.png' mode='aspectFit'></image>
-  </navigator>
-  <navigator class='news' url='/pages/news/news'>
-    <image src='/pages/image/news.png' mode='aspectFit'></image>
-  </navigator>
-  <navigator class='search' url='/pages/search/search'>
-    <image src='/pages/image/search.png' mode='aspectFit'></image>
-  </navigator>
+  <view>
+    <navigator class='search' url='/pages/search/search'>
+      <image src='http://wx.yinyueping.com/image/app/search.png' mode='aspectFit'></image>
+    </navigator>
+    <navigator class='bottle' url='/pages/index/index'>
+      <image src='http://wx.yinyueping.com/image/app/music.png' mode='aspectFit'></image>
+    </navigator>
+    <navigator class='news' url='/pages/news/news'>
+      <image src='http://wx.yinyueping.com/image/app/news.png' mode='aspectFit'></image>
+    </navigator>
+  </view>
 </view>
 <!--轮播图-->
 <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
@@ -28,25 +24,25 @@
 <view class="column">
   <view>
     <navigator url='/pages/everyday/everyday' class='everyday'>
-      <image src='/pages/image/everyday.png'  mode='widthFix'></image>
+      <image src='http://wx.yinyueping.com/image/app/everyday.png'  mode='widthFix'></image>
     </navigator>
     <text>每日推荐</text>
   </view>
   <view>
     <navigator url='/pages/ranking/ranking' class='ranking'>
-      <image src='/pages/image/ranking.png'  mode='widthFix'></image>
+      <image src='http://wx.yinyueping.com/image/app/ranking.png'  mode='widthFix'></image>
     </navigator>
     <text>排行榜</text>
   </view>
   <view>
     <navigator url='/pages/sheet/sheet' class='songSheet'>
-      <image src='/pages/image/songSheet.png'  mode='widthFix'></image>
+      <image src='http://wx.yinyueping.com/image/app/songSheet.png'  mode='widthFix'></image>
     </navigator>
     <text>歌单</text>
   </view>
   <view>
     <navigator url='/pages/singer/singer' class='singer'>
-      <image src='/pages/image/singer.png'  mode='widthFix'></image>
+      <image src='http://wx.yinyueping.com/image/app/singer.png'  mode='widthFix'></image>
     </navigator>
     <text>歌手</text>
   </view>
@@ -73,4 +69,5 @@
 <!--播放列表-->
 <view class='playlist {{playlist}}'>
   <view wx:for='{{song}}' wx:key='id' wx:index='index' wx:if='{{index < 10}}' data-index='{{index}}'  bindtap='song'>{{item.title}} - {{item.singer}}</view>
+  <image src='http://wx.yinyueping.com/image/app/close.png' class='close' mode='aspectFit' bindtap='close'></image>
 </view>

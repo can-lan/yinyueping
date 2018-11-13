@@ -11,13 +11,13 @@
     "pages/singer/singer",
     "component/player/player",
     "component/song/song",
-    "component/list/list"
+    "component/list/list",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#45ADC6",
     "navigationBarTitleText": "音乐瓶",
-    "navigationBarTextStyle": "white",
-    "enablePullDownRefresh": true
+    "navigationBarTextStyle": "white"
   }
 }

@@ -1,139 +1,25 @@
-// pages/details/details.js
+// pages/search/search.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list:{},
+    val:'',
     song:[],
-    btnsrc: '',
-    playing: {},
-    bgm: {},
-    playlist: 'hidden'  //播放列表显示隐藏
+    btnsrc: 'http://wx.yinyueping.com/image/app/play.png', //播放/暂停按钮默认图片
+    list: [],  //所有歌单--可sql截取
+    bgm: {},   //背景音乐对象
+    playing: {},//正在播放音乐, 默认第一首最新的
+    playlist: 'hidden',
+    index: 0, //正在播放歌曲下标
+    btn: 0 //当前点击播放器按钮
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {  
-    if (!options.singer && !options.rank && !options.ranks) {  //没有歌手 且 没有排行榜 且 没有其他排行榜 说明是歌单页进入
-      var id=options.id;
-      /*请求该歌单信息*/
-      wx.request({
-        url: 'http://wx.yinyueping.com:7002/list?id=' + id,
-        success: (res) => {
-          this.setData({
-            list: res.data[0]
-          });
-        }
-      });
-      /*请求该歌单内歌曲*/
-      wx.request({
-        url:'http://wx.yinyueping.com:7002/song/list?list='+id,
-        success:(res)=>{
-          this.setData({
-            song:res.data
-          });
-        }
-      });
-    }
-    if(options.singer){ //有歌手
-      var singer=options.singer;
-      var id = options.id;
-      /*请求该歌单信息*/
-      wx.request({
-        url: 'http://wx.yinyueping.com:7002/singer?id=' + id, //查询该歌手信息
-        success: (res) => {
-          var obj=res.data[0];
-          obj.title=obj.singer
-          this.setData({
-            list: obj
-          });
-        }
-      });
-      /*请求该歌单内歌曲*/
-      wx.request({
-        url: 'http://wx.yinyueping.com:7002/song/singer?singer=' + singer,
-        success: (res) => {
-          this.setData({
-            song: res.data
-          });
-        }
-      });
-    }
-    if(options.rank){ //有排行榜
-      var rank=options.rank;
-      switch(rank){
-        case 'up':
-          var list={};
-          list.title='飙升榜';
-          list.img='http://wx.yinyueping.com/image/rank/up.jpg';
-          this.setData({
-            list:list
-          });
-          break;
-        case 'hot':
-          var list = {};
-          list.title = '热歌榜';
-          list.img = 'http://wx.yinyueping.com/image/rank/hot.jpg';
-          this.setData({
-            list: list
-          });
-          break;
-        case 'new':
-          var list = {};
-          list.title = '新歌榜';
-          list.img = 'http://wx.yinyueping.com/image/rank/new.jpg';
-          this.setData({
-            list: list
-          });
-          break;
-        case 'game':
-          var list = {};
-          list.title = '电竞榜';
-          list.img = 'http://wx.yinyueping.com/image/rank/game.jpg';
-          this.setData({
-            list: list
-          });
-          break;
-        case 'dy':
-          var list = {};
-          list.title = '抖音榜';
-          list.img = 'http://wx.yinyueping.com/image/rank/dy.jpg';
-          this.setData({
-            list: list
-          });
-          break;
-      }
-      /*请求该榜单歌曲*/
-      wx.request({
-        url:'http://wx.yinyueping.com:7002/song/rank?rank='+rank,
-        success:(res)=>{
-          this.setData({
-            song:res.data
-          });
-        }
-      });
-    }
-    if(options.ranks){  //有其他排行榜
-      var rank=options.ranks;
-      var list={};
-      list.title=options.title;
-      list.img='http://wx.yinyueping.com/image/rank/rank'+rank+'.jpg';
-      this.setData({
-        list:list
-      });
-      /*请求该榜单歌曲*/
-      wx.request({
-        url: 'http://wx.yinyueping.com:7002/song/rank?rank=new',
-        success: (res) => {
-          this.setData({
-            song: res.data
-          });
-        }
-      });
-    }
+  onLoad: function (options) {
     /*页面一加载,将storage中的正在播放歌曲取出,放入data中playing,加载到前端播放器*/
     var that = this;
     wx.getStorage({
@@ -205,6 +91,24 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /*输入框输入事件*/
+  input:function(event){
+    var val=event.detail.value
+    this.setData({
+      val:val
+    });
+  },
+  /*点击搜索按钮*/
+  search:function(){
+    wx.request({
+      url:'http://wx.yinyueping.com:7002/song/title?title='+this.data.val,
+      success:(res)=>{
+        this.setData({
+          song:res.data
+        });
+      }
+    });
   },
   /*点击song组件*/
   song: function (event) {

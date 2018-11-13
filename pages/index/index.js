@@ -6,12 +6,12 @@ Page({
    */
   data: {
     banner:[
-      "/pages/image/banner1.png",
-      "/pages/image/banner2.png",
-      "/pages/image/banner3.png",
-      "/pages/image/banner4.png"
+      "http://wx.yinyueping.com/image/banner/banner1.png",
+      "http://wx.yinyueping.com/image/banner/banner2.png",
+      "http://wx.yinyueping.com/image/banner/banner3.png",
+      "http://wx.yinyueping.com/image/banner/banner4.png"
     ],
-    btnsrc:'/pages/image/play.png', //播放/暂停按钮默认图片
+    btnsrc:'http://wx.yinyueping.com/image/app/play.png', //播放/暂停按钮默认图片
     list:[],  //所有歌单--可sql截取
     song:[],  //所有歌曲--可sql截取
     bgm:{},   //背景音乐对象
@@ -140,11 +140,17 @@ Page({
     bgm.singer = playing.singer
     bgm.coverImgUrl = playing.coverImgUrl
     bgm.src = playing.src
+    bgm.onEnded(()=>{ //背景音乐自动播放完成时
+      this.setData({
+        index:this.data.index+1
+      });
+      this.song();
+    });
     this.setData({
       bgm:bgm
     });
 
-    this.setData({ btnsrc: '/pages/image/pause.png' }) //5.按钮图片改为暂停
+    this.setData({ btnsrc: 'http://wx.yinyueping.com/image/app/pause.png' }) //5.按钮图片改为暂停
 
     wx.setStorage({ //5.插入storage
       key:'playing',
@@ -160,10 +166,10 @@ Page({
       this.song();  //调用播放器组件,创建默认背景音乐
     }else if (this.data.bgm.paused) { //音乐暂停==>true
       this.data.bgm.play()  //播放音乐
-      this.setData({ btnsrc:'/pages/image/pause.png'}) //按钮图片改为暂停
+      this.setData({ btnsrc:'http://wx.yinyueping.com/image/app/pause.png'}) //按钮图片改为暂停
     } else {
       this.data.bgm.pause() //暂停音乐
-      this.setData({ btnsrc: '/pages/image/play.png' }) //按钮图片改为播放
+      this.setData({ btnsrc: 'http://wx.yinyueping.com/image/app/play.png' }) //按钮图片改为播放
     }
   },
   /*点击上一曲*/
@@ -192,6 +198,12 @@ Page({
     var id=e.id;
     wx.navigateTo({
       url: '/pages/details/details?id='+id,
+    });
+  },
+  /*关闭播放列表按钮*/
+  close:function(){
+    this.setData({
+      playlist:'hidden'
     });
   }
 })

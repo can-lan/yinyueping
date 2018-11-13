@@ -1,0 +1,29 @@
+<!--导航栏-->
+<view class='nav'>
+  <view>
+    <navigator class='search' url='/pages/search/search'>
+      <image src='http://wx.yinyueping.com/image/app/search.png' mode='aspectFit'></image>
+    </navigator>
+    <navigator class='bottle' url='/pages/index/index'>
+      <image src='http://wx.yinyueping.com/image/app/music.png' mode='aspectFit'></image>
+    </navigator>
+    <navigator class='news' url='/pages/news/news'>
+      <image src='http://wx.yinyueping.com/image/app/news.png' mode='aspectFit'></image>
+    </navigator>
+  </view>
+</view>
+<!--搜索功能-->
+<view class="search">
+  <input placeholder="请输入歌曲名称" focus value='{{val}}' bindinput='input'/>
+  <view class='send' bindtap='search'>搜索</view>
+</view>             
+  <!--歌曲组件-->
+  <song wx:for="{{song}}" wx:key='id' title='{{item.title}}' singer='{{item.singer}}' epname='{{item.epname}}' coverImgUrl='{{item.coverImgUrl}}' data-index='{{index}}' bindtap='song'></song>
+  <!--播放器组件-->
+  <player title='{{playing.title}}' singer='{{playing.singer}}' coverImgUrl='{{playing.coverImgUrl}}' btnsrc='{{btnsrc}}' bindprev='prev' bindplayer='player' bindnext='next' bindplaylist='playlist'></player>
+  <!--播放列表-->
+<view class='playlist {{playlist}}'>
+  <view wx:for='{{song}}' wx:key='id' wx:index='index' wx:if='{{index < 10}}' data-index='{{index}}'  bindtap='song'>{{item.title}} - {{item.singer}}</view>
+  <image src='http://wx.yinyueping.com/image/app/close.png' class='close' mode='aspectFit' bindtap='close'></image>
+</view>
+

@@ -11,19 +11,20 @@ page{
 .nav{
   width:100%;
   height:60rpx;
+  background:#45ADC6;
+}
+.nav>view{
+  width:50%;
+  height:60rpx;
+  margin:0 auto;
   display:flex;
   justify-content:space-around;
-  background:#45ADC6;
-  
 }
 .nav image{
   width:50rpx;
   height:50rpx;
   padding:5rpx;
 }
-.info{margin-left:-80rpx;}
-.search{margin-right:-80rpx;}
-.bottle{margin:0 -130rpx;}
 /*轮播图*/
 swiper,swiper-item,swiper-item image{
   width:100%;
@@ -146,4 +147,14 @@ view.heading{
 }
 .playlist.show{
   height:600rpx;
+}
+/*关闭播放列表箭头*/
+.close{
+  position:absolute;
+  z-index:3;
+  top:20rpx;
+  right:30rpx;
+  width:30rpx;
+  height:30rpx;
+  transform:rotate(180deg)
 }

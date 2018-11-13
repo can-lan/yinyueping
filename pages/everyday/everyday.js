@@ -9,7 +9,9 @@ Page({
     song:[],
     playing:{},
     bgm: {},
-    playlist: 'hidden'  //播放列表显示隐藏
+    playlist: 'hidden',  //播放列表显示隐藏
+    btn:0,
+    index:0
   },
 
   /**
@@ -17,11 +19,10 @@ Page({
    */
   onLoad: function (options) {
     /*页面一加载,将storage中的正在播放歌曲取出,放入data中playing,加载到前端播放器*/
-    var that=this;
     wx.getStorage({
       key:'playing',
-      success(res){
-        that.setData({
+      success:(res)=>{
+        this.setData({
           playing:res.data
         })
       }
@@ -44,9 +45,9 @@ Page({
 
     /*查看背景音乐是否播放,更换播放按钮图片*/
     if (this.data.bgm.paused == undefined || this.data.bgm.paused) {  //判断:如果没有背景音乐, 或 暂停状态
-      this.setData({ btnsrc: '/pages/image/play.png' }) //按钮图片改为暂停
+      this.setData({ btnsrc: 'http://wx.yinyueping.com/image/app/play.png' }) //按钮图片改为暂停
     } else { //音乐在播放
-      this.setData({ btnsrc: '/pages/image/pause.png' }) //按钮图片改为暂停
+      this.setData({ btnsrc: 'http://wx.yinyueping.com/image/app/pause.png' }) //按钮图片改为暂停
     }
   },
 
@@ -103,7 +104,7 @@ Page({
     this.setData({
       playlist: 'hidden' //1.点击歌曲,隐藏播放器列表
     });
-
+    
     if (event) {  //2.1如果有event, 说明是歌曲调用的
       var e = event.currentTarget.dataset;
       var playing = this.data.song[e.index]; //2.2利用index从当前data内的song[]数组, 找到正在播放的对象
@@ -136,11 +137,17 @@ Page({
     bgm.singer = playing.singer
     bgm.coverImgUrl = playing.coverImgUrl
     bgm.src = playing.src
+    bgm.onEnded(() => { //背景音乐自动播放完成时
+      this.setData({
+        index: this.data.index + 1
+      });
+      this.song();
+    });
     this.setData({
       bgm: bgm
     });
 
-    this.setData({ btnsrc: '/pages/image/pause.png' }) //5.按钮图片改为暂停
+    this.setData({ btnsrc: 'http://wx.yinyueping.com/image/app/pause.png' }) //5.按钮图片改为暂停
 
     wx.setStorage({ //5.插入storage
       key: 'playing',
@@ -156,10 +163,10 @@ Page({
       this.song();  //调用播放器组件,创建默认背景音乐
     } else if (this.data.bgm.paused) { //音乐暂停==>true
       this.data.bgm.play()  //播放音乐
-      this.setData({ btnsrc: '/pages/image/pause.png' }) //按钮图片改为暂停
+      this.setData({ btnsrc: 'http://wx.yinyueping.com/image/app/pause.png' }) //按钮图片改为暂停
     } else {
       this.data.bgm.pause() //暂停音乐
-      this.setData({ btnsrc: '/pages/image/play.png' }) //按钮图片改为播放
+      this.setData({ btnsrc: 'http://wx.yinyueping.com/image/app/play.png' }) //按钮图片改为播放
     }
   },
   /*点击上一曲*/
@@ -178,9 +185,14 @@ Page({
   },
   /*点击播放器列表--显示mylist*/
   playlist: function () {
-    console.log(123)
     this.setData({
       playlist: 'show'
+    });
+  },
+  /*关闭播放列表按钮*/
+  close: function () {
+    this.setData({
+      playlist: 'hidden'
     });
   }
 })

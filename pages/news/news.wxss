@@ -1,3 +1,8 @@
+page{
+
+  background:#444;
+
+}
 page>.news,page>.news video{
   width:99%;
   margin:0.4%;
@@ -5,6 +10,7 @@ page>.news,page>.news video{
 }
 page>.news{
   margin-bottom:50rpx;
+  position:relative;
 }
 .news text{
   padding:15rpx 15rpx 10rpx;
@@ -34,4 +40,13 @@ page>.news{
   height:30rpx;
   margin:10rpx 5rpx 10rpx 40rpx;
   vertical-align:middle;
+}
+.playbtn{
+  position:absolute;
+  z-index: 2;
+  width:150rpx;
+  height:150rpx;
+  top:150rpx;
+  left:40%;
+  opacity:.8;
 }

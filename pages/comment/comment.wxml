@@ -22,7 +22,7 @@
       </view>
       <view class="up">
         <text>25赞</text>
-        <image src='/pages/image/up.png'></image>
+        <image src='http://wx.yinyueping.com/image/app/up.png'></image>
       </view>
     </view>
     <view class='commentText'>
@@ -41,7 +41,7 @@
       </view>
       <view class="up">
         <text>25赞</text>
-        <image src='/pages/image/up.png'></image>
+        <image src='http://wx.yinyueping.com/image/app/up.png'></image>
       </view>
     </view>
     <view class='commentText'>
@@ -60,7 +60,7 @@
       </view>
       <view class="up">
         <text>25赞</text>
-        <image src='/pages/image/up.png'></image>
+        <image src='http://wx.yinyueping.com/image/app/up.png'></image>
       </view>
     </view>
     <view class='commentText'>
@@ -70,7 +70,7 @@
 </view>
 <!--评论组件-->
 <view class='comments'>
-  <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
+  <image src='http://wx.yinyueping.com/image/list/list10.jpg' mode='widthFix'></image>
   <view>
     <view class='commentInfo'>
       <view class='userTime'>
@@ -79,7 +79,7 @@
       </view>
       <view class="up">
         <text>25赞</text>
-        <image src='/pages/image/up.png'></image>
+        <image src='http://wx.yinyueping.com/image/app/up.png'></image>
       </view>
     </view>
     <view class='commentText'>
@@ -89,7 +89,7 @@
 </view>
 <!--评论组件-->
 <view class='comments'>
-  <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
+  <image src='http://wx.yinyueping.com/image/list/list10.jpg' mode='widthFix'></image>
   <view>
     <view class='commentInfo'>
       <view class='userTime'>
@@ -98,7 +98,7 @@
       </view>
       <view class="up">
         <text>25赞</text>
-        <image src='/pages/image/up.png'></image>
+        <image src='http://wx.yinyueping.com/image/app/up.png'></image>
       </view>
     </view>
     <view class='commentText'>
@@ -108,7 +108,7 @@
 </view>
 <!--评论组件-->
 <view class='comments'>
-  <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
+  <image src='http://wx.yinyueping.com/image/list/list10.jpg' mode='widthFix'></image>
   <view>
     <view class='commentInfo'>
       <view class='userTime'>
@@ -117,7 +117,7 @@
       </view>
       <view class="up">
         <text>25赞</text>
-        <image src='/pages/image/up.png'></image>
+        <image src='http://wx.yinyueping.com/image/list/list10.jpg'></image>
       </view>
     </view>
     <view class='commentText'>
@@ -127,7 +127,7 @@
 </view>
 <!--评论组件-->
 <view class='comments'>
-  <image src='/pages/image/songSheet10.jpg' mode='widthFix'></image>
+  <image src='http://wx.yinyueping.com/image/list/list10.jpg' mode='widthFix'></image>
   <view>
     <view class='commentInfo'>
       <view class='userTime'>
@@ -136,7 +136,7 @@
       </view>
       <view class="up">
         <text>25赞</text>
-        <image src='/pages/image/up.png'></image>
+        <image src='http://wx.yinyueping.com/image/app/up.png'></image>
       </view>
     </view>
     <view class='commentText'>

@@ -6,8 +6,8 @@
         <text class='singer'>{{singer}} - {{epname}}</text>
       </view>
       <view class='songRight'>
-      <image src="/pages/image/news.png" mode="widthFix"></image>
-      <image src="/pages/image/detail.png"  mode="widthFix"></image>
+      <image src="http://wx.yinyueping.com/image/app/news.png" mode="widthFix"></image>
+      <image src="http://wx.yinyueping.com/image/app/detail.png"  mode="widthFix"></image>
       </view>
     </view>
   </view>

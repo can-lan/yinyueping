@@ -19,6 +19,7 @@ page{
 }
 .column navigator image{
   width:60%;
+  height:52rpx;
   border:1px solid #fff;
 }
 /*栏目预览*/

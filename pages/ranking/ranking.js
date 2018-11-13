@@ -19,7 +19,6 @@ Page({
     wx.request({
       url:"http://wx.yinyueping.com:7002/song/rank?rank=up",
       success:(res)=>{
-        console.log(res)
         this.setData({
           up:res.data
         });
@@ -28,7 +27,6 @@ Page({
     wx.request({
       url: "http://wx.yinyueping.com:7002/song/rank?rank=hot",
       success: (res) => {
-        console.log(res)
         this.setData({
           hot: res.data
         });
@@ -37,7 +35,6 @@ Page({
     wx.request({
       url: "http://wx.yinyueping.com:7002/song/rank?rank=new",
       success: (res) => {
-        console.log(res)
         this.setData({
           new: res.data
         });
@@ -46,7 +43,6 @@ Page({
     wx.request({
       url: "http://wx.yinyueping.com:7002/song/rank?rank=game",
       success: (res) => {
-        console.log(res)
         this.setData({
           game: res.data
         });
@@ -55,7 +51,6 @@ Page({
     wx.request({
       url: "http://wx.yinyueping.com:7002/song/rank?rank=dy",
       success: (res) => {
-        console.log(res)
         this.setData({
           dy: res.data
         });

@@ -7,18 +7,18 @@ CREATE TABLE yyp_user(
   uname VARCHAR(16),
   upwd VARCHAR(32),
   phone VARCHAR(20),
-  photo VARCHAR(128) DEFAULT './img/pub/photo.png',
+  photo VARCHAR(128) DEFAULT '.http://wx.yinyueping.com/image/app/photo.png',
   love VARCHAR(10240)
 );
 /*歌曲表*/
 CREATE TABLE yyp_song(
   id INT PRIMARY KEY AUTO_INCREMENT,
   title VARCHAR(16),
-  singer VARCHAR(16),
+  singer VARCHAR(64),
   epname VARCHAR(16),
   coverImgUrl VARCHAR(128), #封面图
   src VARCHAR(128),         #歌曲地址
-  list INT DEFAULT 10, #所属歌单id
+  list INT DEFAULT 1, #所属歌单id
   rank VARCHAR(16) DEFAULT 'new' #所属榜单
 );
 /*歌单表*/
@@ -39,21 +39,44 @@ CREATE TABLE yyp_singer(
 
 /*歌曲表数据*/
 INSERT INTO yyp_song VALUES
-(null,'Fragments','千坂','Fragments','http://wx.yinyueping.com/image/song/fragments.jpg','http://wx.yinyueping.com/song/fragments.mp3',DEFAULT,'up'),
-(null,'卡农','千坂','Fragments','http://wx.yinyueping.com/image/song/kn.jpg','http://wx.yinyueping.com/song/kn.mp3',DEFAULT,'hot'),
-(null,'我喜欢上你时的内心活动','陈绮贞','Fragments','http://wx.yinyueping.com/image/song/wxhsnsdnxhd.jpg','http://wx.yinyueping.com/song/wxhsnsdnxhd.mp3',DEFAULT,'new'),
-(null,'不完美女孩','周冬雨','Fragments','http://wx.yinyueping.com/image/song/bwmnh.jpg','http://wx.yinyueping.com/song/bwmnh.mp3',DEFAULT,'game'),
-(null,'稻香','周杰伦','Fragments','http://wx.yinyueping.com/image/song/dx.jpg','http://wx.yinyueping.com/song/dx.mp3',DEFAULT,'dy'),
-(null,'Fragments','千坂','Fragments','http://wx.yinyueping.com/image/song/fragments.jpg','http://wx.yinyueping.com/song/fragments.mp3',DEFAULT,DEFAULT),
-(null,'卡农','千坂','Fragments','http://wx.yinyueping.com/image/song/kn.jpg','http://wx.yinyueping.com/song/kn.mp3',DEFAULT,DEFAULT),
-(null,'我喜欢上你时的内心活动','陈绮贞','Fragments','http://wx.yinyueping.com/image/song/wxhsnsdnxhd.jpg','http://wx.yinyueping.com/song/wxhsnsdnxhd.mp3',DEFAULT,DEFAULT),
-(null,'不完美女孩','周冬雨','Fragments','http://wx.yinyueping.com/image/song/bwmnh.jpg','http://wx.yinyueping.com/song/bwmnh.mp3',DEFAULT,DEFAULT),
-(null,'稻香','周杰伦','Fragments','http://wx.yinyueping.com/image/song/dx.jpg','http://wx.yinyueping.com/song/dx.mp3',DEFAULT,DEFAULT),
-(null,'Fragments','千坂','Fragments','http://wx.yinyueping.com/image/song/fragments.jpg','http://wx.yinyueping.com/song/fragments.mp3',DEFAULT,DEFAULT),
-(null,'卡农','千坂','Fragments','http://wx.yinyueping.com/image/song/kn.jpg','http://wx.yinyueping.com/song/kn.mp3',DEFAULT,DEFAULT),
-(null,'我喜欢上你时的内心活动','陈绮贞','Fragments','http://wx.yinyueping.com/image/song/wxhsnsdnxhd.jpg','http://wx.yinyueping.com/song/wxhsnsdnxhd.mp3',DEFAULT,DEFAULT),
-(null,'不完美女孩','周冬雨','Fragments','http://wx.yinyueping.com/image/song/bwmnh.jpg','http://wx.yinyueping.com/song/bwmnh.mp3',DEFAULT,DEFAULT),
-(null,'稻香','周杰伦','Fragments','http://wx.yinyueping.com/image/song/dx.jpg','http://wx.yinyueping.com/song/dx.mp3',DEFAULT,DEFAULT);
+(null,'前前前世','radwinmps','君的名字','http://wx.yinyueping.com/image/song/default.jpg','http://wx.yinyueping.com/song/qqqs.mp3',DEFAULT,'up'),
+(null,'Bila','candy','Bila','http://wx.yinyueping.com/image/song/fragment.jpg','http://wx.yinyueping.com/song/bila.mp3',DEFAULT,DEFAULT),
+(null,'My Heart','','','http://wx.yinyueping.com/image/song/default.jpg','http://wx.yinyueping.com/song/myheart.mp3',DEFAULT,'up'),
+(null,'Cosi Tanto','federica','magari','http://wx.yinyueping.com/image/song/default.jpg','http://wx.yinyueping.com/song/cositanto.mp3',DEFAULT,'hot'),
+(null,'The truth that you leave','pianoboy','pianoboy','http://wx.yinyueping.com/image/song/default.jpg','http://wx.yinyueping.com/song/thetruethatyouleave.mp3',DEFAULT,DEFAULT),
+(null,'2017 End of the year','Vicetone','Vicetone','http://wx.yinyueping.com/image/song/fragment.jpg','http://wx.yinyueping.com/song/2017.mp3',DEFAULT,'up'),
+(null,'River Flows in You','yiruma','absolute','http://wx.yinyueping.com/image/song/default.jpg','http://wx.yinyueping.com/song/rfiy.mp3',DEFAULT,'hot'),
+(null,'lifeline','zeraphym','lifeline','http://wx.yinyueping.com/image/song/fragment.jpg','http://wx.yinyueping.com/song/lifeline.mp3',10,'hot'),
+(null,'童话镇','暗杆','童话镇','http://wx.yinyueping.com/image/song/default.jpg','http://wx.yinyueping.com/song/thz.mp3',10,'hot'),
+(null,'想遇见一个人','曾咏熙','想遇见','http://wx.yinyueping.com/image/song/default.jpg','http://wx.yinyueping.com/song/xyjygr.mp3',10,'up'),
+(null,'愚昧','陈雪凝','拾陆','http://wx.yinyueping.com/image/song/default.jpg','http://wx.yinyueping.com/song/ym.mp3',9,'game'),
+(null,'其实,我就在你方圆几里','陈壹千','其实','http://wx.yinyueping.com/image/song/kn.jpg','http://wx.yinyueping.com/song/qswjznfyjl.mp3',9,'game'),
+(null,'二号位','河豚','二号位','http://wx.yinyueping.com/image/song/wxhsnsdnxhd.jpg','http://wx.yinyueping.com/song/ehw.mp3',8,'game'),
+(null,'小相思','花粥','小相思','http://wx.yinyueping.com/image/song/default.jpg','http://wx.yinyueping.com/song/xxs.mp3',8,'game'),
+(null,'有你陪伴的夏天','黄靖','环城七十里','http://wx.yinyueping.com/image/song/bwmnh.jpg','http://wx.yinyueping.com/song/ynpbdxt.mp3',7,'up'),
+(null,'撒野','凯瑟喵','撒野','http://wx.yinyueping.com/image/song/default.jpg','http://wx.yinyueping.com/song/sy.mp3',7,'game'),
+(null,'血腥爱情故事','祖娅纳惜','祖娅纳惜','http://wx.yinyueping.com/image/song/default.jpg','http://wx.yinyueping.com/song/xxaqgs.mp3',7,'game'),
+(null,'丁建国写的歌','路默依','缝纫机乐队','http://wx.yinyueping.com/image/song/wxhsnsdnxhd.jpg','http://wx.yinyueping.com/song/djgxdg.mp3',6,'dy'),
+(null,'霜雪千年','洛天依','洛天依作品','http://wx.yinyueping.com/image/song/dx.jpg','http://wx.yinyueping.com/sxqn.mp3',6,'dy'),
+(null,'塑料袋','乔杉','缝纫机乐队','http://wx.yinyueping.com/image/song/kn.jpg','http://wx.yinyueping.com/song/sld.mp3',6,'dy'),
+(null,'我已经爱上你','情词尧','一秒钟而已','http://wx.yinyueping.com/image/song/default.jpg','http://wx.yinyueping.com/song/wyjasn.mp3',5,'dy'),
+(null,'妥协','是阿涵啊','阿涵翻唱','http://wx.yinyueping.com/image/song/wxhsnsdnxhd.jpg','http://wx.yinyueping.com/song/tx.mp3',5,'dy'),
+(null,'心做','双笙','心做','http://wx.yinyueping.com/image/song/default.jpg','http://wx.yinyueping.com/song/xz.mp3',5,'dy'),
+(null,'终有一天,我会抛弃你们','兔裹煎蛋卷','兔裹煎蛋卷','http://wx.yinyueping.com/image/song/dx.jpg','http://wx.yinyueping.com/song/zyytwhpqnm.mp3',4,'up'),
+(null,'等下一个他','习谱予','习谱予','http://wx.yinyueping.com/image/song/wxhsnsdnxhd.jpg','http://wx.yinyueping.com/song/dxygt.mp3',4,'up'),
+(null,'我的一个道姑朋友','以冬','以冬','http://wx.yinyueping.com/image/song/kn.jpg','http://wx.yinyueping.com/song/wdygdgpy.mp3',4,'up'),
+(null,'想对现在告别','习谱予','想对现在告别','http://wx.yinyueping.com/image/song/default.jpg','http://wx.yinyueping.com/song/xdxzgb.mp3',3,'hot'),
+(null,'绿茶','杨亚茹','绿茶','http://wx.yinyueping.com/image/song/fragment.jpg','http://wx.yinyueping.com/song/lc.mp3',3,'hot'),
+(null,'夢灯籠','radwinmps','君的名字','http://wx.yinyueping.com/image/song/default.jpg','http://wx.yinyueping.com/song/mdl.mp3',DEFAULT,DEFAULT),
+(null,'去年夏天','杨梓琪呀','杨梓琪呀','http://wx.yinyueping.com/image/song/default.jpg','http://wx.yinyueping.com/song/qnxt.mp3',3,'hot'),
+(null,'少林英雄','于光荣','少林英雄','http://wx.yinyueping.com/image/song/bwmnh.jpg','http://wx.yinyueping.com/song/slyx.mp3',2,'hot'),
+(null,'Fragments','千坂','Fragments','http://wx.yinyueping.com/image/song/fragment.jpg','http://wx.yinyueping.com/song/fragments.mp3',2,'up'),
+(null,'卡农','千坂','canon','http://wx.yinyueping.com/image/song/kn.jpg','http://wx.yinyueping.com/song/kn.mp3',DEFAULT,'hot'),
+(null,'我喜欢上你时的内心活动','陈绮贞','陈绮贞','http://wx.yinyueping.com/image/song/wxhsnsdnxhd.jpg','http://wx.yinyueping.com/song/wxhsnsdnxhd.mp3',DEFAULT,'new'),
+(null,'不完美女孩','周冬雨','周冬雨','http://wx.yinyueping.com/image/song/bwmnh.jpg','http://wx.yinyueping.com/song/bwmnh.mp3',DEFAULT,'game'),
+(null,'稻香','周杰伦','摩羯座','http://wx.yinyueping.com/image/song/dx.jpg','http://wx.yinyueping.com/song/dx.mp3',DEFAULT,'dy'),
+(null,'怪兽入侵','刘维','火星情报局','http://wx.yinyueping.com/image/song/gsrq.jpg','http://wx.yinyueping.com/song/gsrq.mp3',2,'hot');
+
 /*歌单表数据*/
 INSERT INTO yyp_list VALUES
 (null,'你以为我不会走,我以为你会留','http://wx.yinyueping.com/image/list/list1.jpg','音乐瓶',DEFAULT),

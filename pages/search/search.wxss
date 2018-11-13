@@ -1,0 +1,19 @@
+.search{
+  color:#fff;
+  position:relative;
+}
+.search>input{
+  border:1rpx solid #fff;
+  margin:10rpx;
+}
+.send{
+  width:120rpx;
+  height:53rpx;
+  position:absolute;
+  top:1rpx;
+  right:12rpx;
+  text-align:center;
+  line-height:53rpx;
+  border-left:1rpx solid #fff;
+  z-index:2;
+}
