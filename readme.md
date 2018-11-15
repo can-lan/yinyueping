@@ -2,10 +2,10 @@
 2.小程序资源供学习测试使用,资源版权归原网站所有,请勿申请上线。  
 3.程序静态图片预览如下。  
 ![image](https://github.com/dong-can/yinyueping/raw/master/preview/1.png)
-![image](https://github.com/dong-can/yinyueping/raw/master/preview/2.png)
-![image](https://github.com/dong-can/yinyueping/raw/master/preview/3.png)  
-![image](https://github.com/dong-can/yinyueping/raw/master/preview/4.png) 
-![image](https://github.com/dong-can/yinyueping/raw/master/preview/5.png) 
+![image](https://github.com/dong-can/yinyueping/raw/master/preview/2.png)  
+![image](https://github.com/dong-can/yinyueping/raw/master/preview/3.png)
+![image](https://github.com/dong-can/yinyueping/raw/master/preview/4.png)  
+![image](https://github.com/dong-can/yinyueping/raw/master/preview/5.png)
 ![image](https://github.com/dong-can/yinyueping/raw/master/preview/6.png)  
-![image](https://github.com/dong-can/yinyueping/raw/master/preview/7.png)  
-![image](https://github.com/dong-can/yinyueping/raw/master/preview/8.png)
+![image](https://github.com/dong-can/yinyueping/raw/master/preview/7.png)
+![image](https://github.com/dong-can/yinyueping/raw/master/preview/8.png)  
